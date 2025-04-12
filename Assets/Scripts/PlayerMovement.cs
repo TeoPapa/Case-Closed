@@ -1,3 +1,4 @@
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -9,12 +10,17 @@ public class PlayerMovement : MonoBehaviour
     public float WalkSpeed; //The speed that the player can walk
     public bool CanMove;
 
+    public GameObject BubbleCanvas;
+
     float GetX;
     float GetY;
 
     Interaction currInt;
 
+    
+
     void Start() {
+        BubbleCanvas.SetActive(false);
         currInt = null;
         this.gameObject.transform.position = GameHandler.PlayerPosition;
     }
@@ -40,14 +46,22 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
+        TMP_Text txt = BubbleCanvas.GetComponentInChildren<TMP_Text>();
+        currInt = collision.gameObject.GetComponent<Interaction>();
+
+        txt.text = currInt.getBubble();
+
+        BubbleCanvas.SetActive(true);
+
         currInt = collision.gameObject.GetComponent<Interaction>();
     }
 
     private void OnTriggerExit2D(Collider2D collision) {
         currInt = null;
+        BubbleCanvas.SetActive(false);
     }
 
-    public void Interaction(InputAction.CallbackContext context) {
+    public void Interaction() {
         currInt.PlayerInteraction();
     }
 

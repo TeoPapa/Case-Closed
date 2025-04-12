@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using TMPro;
@@ -66,16 +67,22 @@ public class CaseHandler : MonoBehaviour {
     [Header("Currently Found Objectives Text")]
     public GameObject currFoundtxt;
 
+    public GameObject AllItems;
+    public GameObject cuurentItems;
+
 
     int AllTheObjects = 0;
+    int Everything = 0;
 
     public int FoundObjectives;
+    public int FoundItems;
 
     public void Start() {
         EndScreen.SetActive(false);
         WinScreen.SetActive(false);
 
         currFoundtxt.GetComponent<TMP_Text>().text = "0";
+        cuurentItems.GetComponent<TMP_Text>().text = "0";
 
         LocationBtn.SetActive(true);
         WeaponBtn.SetActive(true);
@@ -88,14 +95,15 @@ public class CaseHandler : MonoBehaviour {
         PeoplePanel.SetActive(true);
 
 
-        CaseNum.text = GameHandler.Level.ToString();
-        Description.text = GameHandler.Description;
+        CaseNum.text = GameHandler.Case.Level.ToString();
+        Description.text = GameHandler.Case.Description;
 
         Life1.SetActive(true);
         Life2.SetActive(true);
         Life3.SetActive(true);
 
-        foreach (CaseItemType i in GameHandler.Location) {
+        foreach (CaseItemType i in GameHandler.Case.Location) {
+            Everything++;
             if(i.isInCase())
                 AllTheObjects++;
 
@@ -103,7 +111,8 @@ public class CaseHandler : MonoBehaviour {
             o.GetComponent<CaseItem>().ObjectCreated(i);
         }
 
-        foreach (CaseItemType i in GameHandler.Weapons) {
+        foreach (CaseItemType i in GameHandler.Case.Weapons) {
+            Everything++;
             if (i.isInCase())
                 AllTheObjects++;
 
@@ -111,7 +120,8 @@ public class CaseHandler : MonoBehaviour {
             o.GetComponent<CaseItem>().ObjectCreated(i);
         }
 
-        foreach (CaseItemType i in GameHandler.StolenItems) {
+        foreach (CaseItemType i in GameHandler.Case.StolenItems) {
+            Everything++;
             if (i.isInCase())
                 AllTheObjects++;
 
@@ -119,7 +129,8 @@ public class CaseHandler : MonoBehaviour {
             o.GetComponent<CaseItem>().ObjectCreated(i);
         }
 
-        foreach (CaseItemType i in GameHandler.People) {
+        foreach (CaseItemType i in GameHandler.Case.People) {
+            Everything++;
             if (i.isInCase())
                 AllTheObjects++;
 
@@ -133,16 +144,17 @@ public class CaseHandler : MonoBehaviour {
         PeoplePanel.SetActive(false);
 
        allobjtxt.GetComponent<TMP_Text>().text = AllTheObjects.ToString();
+       AllItems.GetComponent<TMP_Text>().text = Everything.ToString();
 
         ChangeColors(Mode);
 
-        if (GameHandler.Location.Count <= 0) LocationBtn.SetActive(false);
+        if (GameHandler.Case.Location.Count <= 0) LocationBtn.SetActive(false);
 
-        if (GameHandler.Weapons.Count <= 0) WeaponBtn.SetActive(false);
+        if (GameHandler.Case.Weapons.Count <= 0) WeaponBtn.SetActive(false);
 
-        if (GameHandler.StolenItems.Count <= 0) StolenBtn.SetActive(false);
+        if (GameHandler.Case.StolenItems.Count <= 0) StolenBtn.SetActive(false);
 
-        if (GameHandler.People.Count <= 0) PeopleBtn.SetActive(false);
+        if (GameHandler.Case.People.Count <= 0) PeopleBtn.SetActive(false);
     }
         
     public void switchMode(bool mode) {
@@ -151,20 +163,20 @@ public class CaseHandler : MonoBehaviour {
     }
 
     void ChangeColors(bool Type) {
-        Button b = ReadyModebtn.GetComponent<Button>();
-        Button b2 = InvestigationModebtn.GetComponent<Button>();
+        Image ReadyBtn = ReadyModebtn.GetComponent<Image>();
+        Image InvBtn = InvestigationModebtn.GetComponent<Image>();
 
-        if (Type) {
-            b.colors = Fck(DeactiveColor);
-            b2.colors = Fck(ActiveColor);
+        if (!Type) {
+            ReadyBtn.color = DeactiveColor;
+            InvBtn.color = ActiveColor;
             return;
         }
 
-        b.colors = Fck(ActiveColor);
-        b2.colors = Fck(DeactiveColor);
+        InvBtn.color = DeactiveColor;
+        ReadyBtn.color = ActiveColor;
     }
 
-    ColorBlock Fck(Color c) {
+    ColorBlock ChangeColorToBtn(Color c) {
         ColorBlock cb = new ColorBlock();
         cb.highlightedColor = c;
         cb.selectedColor = c;
@@ -200,9 +212,11 @@ public class CaseHandler : MonoBehaviour {
 
     public void FoundItem(bool b) {
 
+        FoundItems += 1;
         if (b) FoundObjectives += 1;
 
         currFoundtxt.GetComponent<TMP_Text>().text = FoundObjectives.ToString();
+        cuurentItems.GetComponent<TMP_Text>().text = FoundItems.ToString();
 
 
         if (b != Mode) {
@@ -210,9 +224,19 @@ public class CaseHandler : MonoBehaviour {
             return;
         }
 
-        if (FoundObjectives == AllTheObjects) {
-            GameWon();
+        if (FoundItems == Everything) {
+            StopAllCoroutines();
+            StartCoroutine(waiter());
         }
+    }
+
+    IEnumerator waiter() {
+
+        //yield on a new YieldInstruction that waits for 5 seconds.
+        yield return new WaitForSeconds(.5f);
+
+
+        GameWon();
     }
 
     void GameWon() {

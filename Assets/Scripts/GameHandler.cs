@@ -1,12 +1,15 @@
 using NUnit.Framework;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameHandler : MonoBehaviour
 {
     public static int Money;
-    static int moneyValue = 5;
+    public static int moneyValue = 5;
+
+    public static bool hasPlayedBefore = false;
 
     public static Vector3 PlayerPosition = new Vector3(-14f, -9f, 0);
 
@@ -14,13 +17,13 @@ public class GameHandler : MonoBehaviour
 
     public static List<Level> LevelsPlayed = new List<Level>();
 
-    public static string DefaultScene = "MainMenu";
+    public static string DefaultScene = "LevelScene";
 
     public static void LoadScene(CaseValue ca)
     {
         Case.ClearLists();
 
-        LevelsPlayed.Add(new Level(ca.Level, ca.Description));
+        LevelsPlayed.Add(new Level(ca.Level.getNumber(), ca.Level.getDescription()));
         Case = ca;
 
         SceneManager.LoadScene("CaseScene");
@@ -37,7 +40,9 @@ public class GameHandler : MonoBehaviour
 
         Money += mon*moneyValue;
 
-        if (DefaultScene.Equals("MainMenu")) DefaultScene = "LevelScene";
+        if(mon < 0) mon = 0;
+
+        hasPlayedBefore = true;
 
         return mon*moneyValue;
     }

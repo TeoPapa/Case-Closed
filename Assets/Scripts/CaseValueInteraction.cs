@@ -3,16 +3,17 @@ using UnityEngine;
 
 public class CaseValueInteraction : Interaction
 {
-    public Canvas Canvas;
     public CaseValue Case;
+    LevelCanvas c;
 
     public void Start() {
-        this.myCanvas = Canvas;
+        c = FindObjectOfType<LevelCanvas>();
+        this.bubbleString = "Level " + Case.Level.getNumber();
     }
 
     public override void PlayerInteraction() {
-
-        Canvas.gameObject.SetActive(true);
+        c.Case = Case;
+        c.Open();
     }
 
 }

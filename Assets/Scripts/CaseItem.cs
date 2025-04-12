@@ -19,8 +19,12 @@ public class CaseItem : MonoBehaviour
 
     public bool isInCase;
 
+    bool hasBeenClicked = false;
+
     public void Clicked()
     {
+        if(hasBeenClicked) return;
+
         Color CardColor = Hint;
         if (isInCase) {
             CardColor = Culprit;
@@ -40,6 +44,7 @@ public class CaseItem : MonoBehaviour
         
 
         FindObjectOfType<CaseHandler>().FoundItem(isInCase);
+        hasBeenClicked = true;
     }
 
     public void ObjectCreated(CaseItemType ob) {

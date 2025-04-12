@@ -1,0 +1,8 @@
+{
+  "displayName": "Game Mode",
+  "description": "Demonstrates how game fps automatically reacts to device Game Mode changes.",
+  "createSeparatePackage": true,
+  "dependencies": {
+
+  }
+}

@@ -9,6 +9,7 @@ public class NewScene : MonoBehaviour
     }
 
     public void newScene() {
+        if (!GameHandler.hasPlayedBefore) ChangeScene("MainMenu");
         ChangeScene(GameHandler.DefaultScene);
     }
 
