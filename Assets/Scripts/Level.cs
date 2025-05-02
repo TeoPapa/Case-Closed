@@ -13,15 +13,21 @@ public class Level
         MoneyGot = 0;
     }
 
+    public Level(int n, int m) {
+        LevelNumber = n;
+        Description = "";
+        MoneyGot = m;
+    }
+
     public int getNumber() { return LevelNumber; }
     public string getDescription() { return Description; }
 
-    public void setMoney(int x) { MoneyGot += x; }
+    public void setMoney(int x) { MoneyGot = x; }
     public int getMoney() { return MoneyGot; }
 
-    public bool equals(object obj) {
+    public bool Equals(object obj) {
         Level l = obj as Level;
 
-        return ((LevelNumber == l.LevelNumber) && (Description.Equals(l.Description)));
+        return (LevelNumber == l.LevelNumber);
     }
 }

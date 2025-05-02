@@ -454,6 +454,9 @@
 -analyzer:"D:/Unity/6000.0.44f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"D:/Unity/6000.0.44f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 -analyzer:"D:/Unity/6000.0.44f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll"
+"Assets/Scripts/AudioManager.cs"
+"Assets/Scripts/Blockade.cs"
+"Assets/Scripts/BlockCanvas.cs"
 "Assets/Scripts/CaseHandler.cs"
 "Assets/Scripts/CaseItem.cs"
 "Assets/Scripts/CaseItemType.cs"
@@ -467,6 +470,8 @@
 "Assets/Scripts/MainMenu.cs"
 "Assets/Scripts/NewScene.cs"
 "Assets/Scripts/PlayerMovement.cs"
+"Assets/Scripts/SaveData.cs"
+"Assets/Scripts/Saver.cs"
 "Assets/TutorialInfo/Scripts/Readme.cs"
 -langversion:9.0
 /deterministic

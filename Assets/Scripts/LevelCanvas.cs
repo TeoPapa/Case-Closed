@@ -22,19 +22,27 @@ public class LevelCanvas : MonoBehaviour {
     public void Open() {
         Panel.SetActive(true);
 
+        Level thisLevel = GameHandler.LevelsPlayed.Find((Level l) => { return l.getNumber() == Case.Level.getNumber(); });
+        if(thisLevel == null ) thisLevel = Case.Level;
+        LevelNumber.text = thisLevel.getNumber().ToString();
+
+        MoneyText.text = thisLevel.getMoney().ToString();
+
+        DescriptionText.text = thisLevel.getDescription();
+
+
         Level hbp = hasBeenPlayed();
 
         if (!(hbp == null)) {
-            LevelNumber.text = hbp.getNumber().ToString();
 
-            for(int i = 3; i > (hbp.getMoney()/GameHandler.moneyValue); i--) {
+            for(int i = 0; i < (hbp.getMoney()/GameHandler.moneyValue); i++) {
                 GameObject o = Instantiate(Lives, LivesParent.transform, LivesParent);
             }
-
-            MoneyText.text = hbp.getMoney().ToString();
-
-            DescriptionText.text = hbp.getDescription();
         }
+        else
+            hbp = Case.Level;
+
+        
 
         this.GetComponentInChildren<ChangeScene>().CaseValue = Case;
     }
@@ -42,13 +50,12 @@ public class LevelCanvas : MonoBehaviour {
     Level hasBeenPlayed() {
         Level curLvl = Case.Level;
 
-        Predicate<Level> lvl = (Level l) => {
-            return l.getNumber() == curLvl.getNumber() && l.getDescription() == curLvl.getDescription();
-        };
+        Level l = GameHandler.LevelsPlayed.Find( (Level l) => l.Equals(curLvl) );
 
-        if(lvl != null)
-            return GameHandler.LevelsPlayed.Find(lvl);
+        if ( l != null ) return l;
 
-        return null;
+        l = new Level(-3, "");
+        l.setMoney(0);
+        return l;
     }
 }

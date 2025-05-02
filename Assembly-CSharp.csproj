@@ -63,14 +63,19 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Interaction.cs" />
     <Compile Include="Assets\Scripts\Level.cs" />
+    <Compile Include="Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Scripts\CaseValue.cs" />
     <Compile Include="Assets\Scripts\CaseHandler.cs" />
+    <Compile Include="Assets\Scripts\BlockCanvas.cs" />
+    <Compile Include="Assets\Scripts\SaveData.cs" />
+    <Compile Include="Assets\Scripts\Saver.cs" />
     <Compile Include="Assets\Scripts\NewScene.cs" />
     <Compile Include="Assets\Scripts\CaseValueInteraction.cs" />
     <Compile Include="Assets\Scripts\GameHandler.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Blockade.cs" />
     <Compile Include="Assets\Scripts\CaseItem.cs" />
     <Compile Include="Assets\Scripts\ChangeScene.cs" />
     <Compile Include="Assets\Scripts\CaseItemType.cs" />

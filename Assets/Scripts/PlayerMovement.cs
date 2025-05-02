@@ -9,8 +9,12 @@ public class PlayerMovement : MonoBehaviour
 
     public float WalkSpeed; //The speed that the player can walk
     public bool CanMove;
+    string GroundName;
 
     public GameObject BubbleCanvas;
+    public TMP_Text MoneyValue;
+
+    Animator PlayerAnimator;
 
     float GetX;
     float GetY;
@@ -20,20 +24,32 @@ public class PlayerMovement : MonoBehaviour
     
 
     void Start() {
+        PlayerAnimator = this.GetComponent<Animator>();
+
         BubbleCanvas.SetActive(false);
         currInt = null;
         this.gameObject.transform.position = GameHandler.PlayerPosition;
+
+        ChangeMoney(GameHandler.Money);
+        GameHandler.DestroyItems();
+    }
+
+    public void ChangeMoney(int x) {
+        MoneyValue.text = x.ToString() + "$";
     }
 
     private void Update() {
         if(!CanMove) {
             GetX = 0;
             GetY = 0;
-        } 
+        }
+
+
     }
 
     private void FixedUpdate() {
         rb.linearVelocity = new Vector2(GetX * WalkSpeed, GetY * WalkSpeed);
+        
     }
 
     public void Move(InputAction.CallbackContext context) {
@@ -43,9 +59,14 @@ public class PlayerMovement : MonoBehaviour
         
         GetX = val.x;
         GetY = val.y;
+
+        PlayerAnimator.SetFloat("X", val.x);
+        PlayerAnimator.SetFloat("Y", val.y);
+        PlayerAnimator.SetBool("Moving", (val.x != 0 || val.y != 0));
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
+        if(!collision.gameObject.tag.Equals("Interaction")) return;
         TMP_Text txt = BubbleCanvas.GetComponentInChildren<TMP_Text>();
         currInt = collision.gameObject.GetComponent<Interaction>();
 
@@ -62,6 +83,9 @@ public class PlayerMovement : MonoBehaviour
     }
 
     public void Interaction() {
+        if(currInt == null) return;
+
+        FindObjectOfType<AudioManager>().InteractSound();
         currInt.PlayerInteraction();
     }
 

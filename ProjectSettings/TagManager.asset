@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Interaction
+  - UserInterfaceButtons
+  - Cobble
+  - Grass
   layers:
   - Default
   - TransparentFX
@@ -40,6 +44,12 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Back
+    uniqueID: 2800472199
+    locked: 0
+  - name: Front
+    uniqueID: 2987052377
     locked: 0
   m_RenderingLayers:
   - Default

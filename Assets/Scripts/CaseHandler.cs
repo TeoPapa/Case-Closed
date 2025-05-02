@@ -77,7 +77,13 @@ public class CaseHandler : MonoBehaviour {
     public int FoundObjectives;
     public int FoundItems;
 
+    public GameObject OpenPanel;
+    public GameObject OpenButton;
+
     public void Start() {
+        OpenPanel.SetActive(true);
+        OpenButton.SetActive(true);
+
         EndScreen.SetActive(false);
         WinScreen.SetActive(false);
 
@@ -95,7 +101,7 @@ public class CaseHandler : MonoBehaviour {
         PeoplePanel.SetActive(true);
 
 
-        CaseNum.text = GameHandler.Case.Level.ToString();
+        CaseNum.text = GameHandler.Case.Level.getNumber().ToString();
         Description.text = GameHandler.Case.Description;
 
         Life1.SetActive(true);
@@ -156,7 +162,18 @@ public class CaseHandler : MonoBehaviour {
 
         if (GameHandler.Case.People.Count <= 0) PeopleBtn.SetActive(false);
     }
-        
+
+    public void Open() {
+        OpenButton.SetActive(false);
+        StartCoroutine(Openner());
+    }
+    IEnumerator Openner() {
+
+        OpenPanel.GetComponent<Animator>().SetTrigger("Open");
+        yield return new WaitForSeconds(.5f);
+
+        OpenPanel.SetActive(false);
+    }
     public void switchMode(bool mode) {
         Mode = mode;
         ChangeColors(Mode);
@@ -246,7 +263,10 @@ public class CaseHandler : MonoBehaviour {
             GameObject o = Instantiate(HintsPrefab, HintsParent.transform, HintsParent);
         }
 
-        int gain = GameHandler.CloseCase(Int32.Parse(CaseNum.text), Description.text, Lives);
+        int gain = GameHandler.CloseCase(GameHandler.Case.Level, Lives);
         MoneyRec.GetComponent<TMP_Text>().text = gain.ToString();
+        GameHandler.hasPlayedBefore = true;
+        Saver.Save();
+
     }
 }

@@ -67,8 +67,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: This is the description of the card that I am onto
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9abc20d017cd6e44598065ee12502ea5, type: 2}
+  m_sharedMaterial: {fileID: -3986951147606233703, guid: 9abc20d017cd6e44598065ee12502ea5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -381,7 +381,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 951202d98eba44046b777a9c8077bc5e, type: 3}
     m_FontSize: 31
     m_FontStyle: 1
     m_BestFit: 0

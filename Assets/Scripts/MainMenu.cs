@@ -9,8 +9,9 @@ public class MainMenu : MonoBehaviour
     public GameObject Tutorial;
 
     public void Start() {
-        int levels = GameHandler.LevelsPlayed.Count;
-        bool x = levels > 0;
+        GameHandler.Load();
+
+        bool x = GameHandler.hasPlayedBefore;
 
         FirstTimeBtn.SetActive(!x);
         ContinueBtn.SetActive(x);
