@@ -5,8 +5,12 @@ using UnityEngine;
 public class CaseItemType{
     public Sprite CardFace;
     public string Name;
+
+    [TextArea(3, 1)]
     public string Description;
     public bool IsInCase;
+
+    public int Type; //0: Location, 1: Weapons, 2: Items, 3: People
 
     public CaseItemType(Sprite c, string n, string d, bool ii) {
         CardFace = c;
@@ -24,7 +28,9 @@ public class CaseItemType{
     }
 
     public string getDescription() {
-        return Description;
+        if(Description.Length <= 100) return Description;
+
+        return Description.Substring(0, 100);
     }
 
     public bool isInCase() {

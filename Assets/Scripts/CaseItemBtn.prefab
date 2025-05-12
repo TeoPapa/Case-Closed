@@ -95,9 +95,9 @@ MonoBehaviour:
   m_fontSize: 30
   m_fontSizeBase: 30
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 10
+  m_fontSizeMax: 30
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -243,7 +243,7 @@ MonoBehaviour:
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 2.7
+    m_ColorMultiplier: 1
     m_FadeDuration: 0
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
@@ -307,8 +307,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c0bfa16115df7149a4596acc0f7e0bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Hint: {r: 0.29911235, g: 0.5566038, b: 0.23891956, a: 1}
-  Culprit: {r: 0.6037736, g: 0.2306871, b: 0.2306871, a: 1}
+  Hint: {r: 0.9528302, g: 0.86146295, b: 0.7146226, a: 1}
+  Culprit: {r: 1, g: 0.6462264, b: 0.6462264, a: 1}
   ThisObject: {fileID: 3033066054744359715}
   CardImage: {fileID: 7253035760789797666}
   CardName: {fileID: 659189205790858614}

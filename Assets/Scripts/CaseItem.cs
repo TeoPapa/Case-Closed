@@ -41,18 +41,18 @@ public class CaseItem : MonoBehaviour
 
         CardDescription.gameObject.SetActive(true);
 
-        
+        FindFirstObjectByType<CaseAudioManager>().ClickCard();
 
-        FindObjectOfType<CaseHandler>().FoundItem(isInCase);
+        FindFirstObjectByType<CaseHandler>().FoundItem(isInCase);
         hasBeenClicked = true;
     }
 
     public void ObjectCreated(CaseItemType ob) {
 
-        CardImage.GetComponent<UnityEngine.UI.Image>().sprite = ob.CardFace;
-        CardName.text = ob.Name;
-        CardDescription.text = ob.Description;
-        isInCase = ob.IsInCase;
+        CardImage.GetComponent<UnityEngine.UI.Image>().sprite = ob.getFace();
+        CardName.text = ob.getName();
+        CardDescription.text = ob.getDescription();
+        isInCase = ob.isInCase();
 
         CardDescription.gameObject.SetActive(false);
     }

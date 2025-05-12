@@ -4,32 +4,47 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
+/* This is a static script that handles the Game Values and holds important data
+ * throught the game's runtime.
+ */
 public class GameHandler : MonoBehaviour
 {
-    public static int Money;
-    public static int moneyValue = 5;
+    public static string PlayerName = "Markus Tinara";
 
-    public static bool hasPlayedBefore = false;
+    public static int Money; //The money of the player
+    public static int moneyValue = 5; //The value of each life in the game
 
-    public static Vector3 PlayerPosition = new Vector3(-14f, -9f, 0);
+    public static bool hasPlayedBefore = false; //If the player plays for the first time
 
-    public static List<int> DestroyedStuff = new List<int>();
+    public static Vector3 PlayerPosition = new Vector3(-14f, -9f, 0); //The position that the player loads
+                                                                      //in the LevelScene (Initialized to
+                                                                      //a centered place)
 
-    public static CaseValue Case = new CaseValue();
+    public static List<int> DestroyedStuff = new List<int>(); //All the destroyed objects (by ID) (Objects
+                                                              //that the player has already interacted and
+                                                              //can be destroyed)
 
-    public static List<Level> LevelsPlayed = new List<Level>();
+    public static CaseValue Case; //The current Case that is going to Load to the CaseScene
 
-    public static string DefaultScene = "MainMenu";
+    public static List<Level> LevelsPlayed = new List<Level>(); //The Levels the player has played
 
-    public static void LoadScene(CaseValue ca)
+    public static string DefaultScene = "MainMenu"; //The default scene (Changes to LevelScene if the player hasPlayedBefore)
+
+    public static float MusicVolume = 1f;
+    public static float SfxVolume = 1f;
+
+    public static string Code = "Teo'sTestingEnv1ronment";
+
+    /* The method that initializes and starts the CaseScene
+     */
+    public static void LoadScene()
     {
-        Case.ClearLists();
-        
-        Case = ca;
-
         SceneManager.LoadScene("CaseScene");
     }
 
+    /* The method that closes the CaseScene and passes the important data to the GameHandler
+     */
     public static int CloseCase(Level lv, int hnt) {
         int mon = hnt*moneyValue;
         int moneyWon = 0;
@@ -50,13 +65,15 @@ public class GameHandler : MonoBehaviour
         return moneyWon;
     }
 
+    /* T
+     */
     public static void DestroyItems() {
-        List<Blockade> b = new List<Blockade>();
+        List<Destroyable> b = new List<Destroyable>();
 
-        b.AddRange(FindObjectsOfType<Blockade>());
-        foreach(Blockade bl in b) {
-            if (DestroyedStuff.Contains(bl.BlockadeID))
-                Destroy(bl.gameObject);
+        b.AddRange(FindObjectsByType<Destroyable>(FindObjectsSortMode.None));
+        foreach(Destroyable bl in b) {
+            if (DestroyedStuff.Contains(bl.DestroyableID))
+                bl.DestroyMe(false);
         }
     }
 

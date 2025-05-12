@@ -1,12 +1,23 @@
+using TMPro;
 using UnityEngine;
 
+/* The script that handles the interactions of the Main Menu
+ */
 public class MainMenu : MonoBehaviour
 {
-    //TODO Implement Save Files For Now This Bool Will Do The Work
-    public GameObject FirstTimeBtn;
-    public GameObject ContinueBtn;
-    public GameObject SettingsBtn;
-    public GameObject Tutorial;
+    public GameObject FirstTimeBtn; //The Play button that will pop when the player plays for the first time
+    public GameObject ContinueBtn; //The Continue button that shows when the player returns
+    public GameObject SettingsBtn; //The Settings button that shows when the player returns
+    public GameObject Tutorial; //The Tutorial panel that shows the first time a player plays (and (TODO) may be openned from settings)
+    public GameObject NamePan; //The name panel
+
+    public TMP_InputField Name; //The name input field
+
+    public CaseValue TutorialCase; //The first case of the game
+
+    public string DefaultName = "Martin";
+
+
 
     public void Start() {
         GameHandler.Load();
@@ -17,5 +28,25 @@ public class MainMenu : MonoBehaviour
         ContinueBtn.SetActive(x);
         SettingsBtn.SetActive(x);
         Tutorial.SetActive(false);
+        NamePan.SetActive(false);
+
+        GameHandler.Case = TutorialCase;
+    }
+
+    public void Continue(GameObject o) {
+        if(GameHandler.hasPlayedBefore) {
+            Tutorial.SetActive(false);
+            return;
+        }
+
+        GameHandler.LoadScene();
+    }
+
+    public void NameSet() {
+       string name = Name.text;
+
+        if(name.Equals("")) name = DefaultName;
+
+        GameHandler.PlayerName = Name.text;
     }
 }

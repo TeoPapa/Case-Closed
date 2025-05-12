@@ -3,76 +3,112 @@
   "WorkspaceRootPath": "D:\\Git\\Case-Closed\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|d:\\git\\case-closed\\assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|D:\\Git\\Case-Closed\\assets\\scripts\\casehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\casehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|D:\\Git\\Case-Closed\\assets\\scripts\\audio\\caseaudiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\audio\\caseaudiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|d:\\git\\case-closed\\assets\\scripts\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|D:\\Git\\Case-Closed\\assets\\scripts\\interactions\\interactablecanvas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\interactions\\interactablecanvas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|D:\\Git\\Case-Closed\\assets\\scripts\\playedlevels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playedlevels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|D:\\Git\\Case-Closed\\assets\\scripts\\audio\\audiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\audio\\audiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|d:\\git\\case-closed\\assets\\scripts\\gamehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|D:\\Git\\Case-Closed\\assets\\scripts\\caseitemtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\caseitemtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|D:\\Git\\Case-Closed\\assets\\scripts\\interactions\\dialoguemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\interactions\\dialoguemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|D:\\Git\\Case-Closed\\assets\\scripts\\interactions\\casevalue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\interactions\\casevalue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|D:\\Git\\Case-Closed\\assets\\scripts\\audio\\levelaudiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\audio\\levelaudiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|D:\\Git\\Case-Closed\\assets\\scripts\\levelinformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\levelinformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|D:\\Git\\Case-Closed\\assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|d:\\git\\case-closed\\assets\\scripts\\audiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\audiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|d:\\git\\case-closed\\assets\\scripts\\casevalueinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\casevalueinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|D:\\Git\\Case-Closed\\assets\\scripts\\saver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\saver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|D:\\Git\\Case-Closed\\assets\\scripts\\casehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\casehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|D:\\Git\\Case-Closed\\assets\\scripts\\gamehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|D:\\Git\\Case-Closed\\assets\\scripts\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|D:\\Git\\Case-Closed\\assets\\scripts\\blockcanvas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\blockcanvas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|D:\\Git\\Case-Closed\\assets\\scripts\\blockade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\blockade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|D:\\Git\\Case-Closed\\assets\\scripts\\savedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\savedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|D:\\Git\\Case-Closed\\assets\\scripts\\level.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\level.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|D:\\Git\\Case-Closed\\assets\\scripts\\levelcanvas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\levelcanvas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|D:\\Git\\Case-Closed\\assets\\scripts\\interactions\\levelcanvas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\interactions\\levelcanvas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|D:\\Git\\Case-Closed\\assets\\scripts\\changescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\changescene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|D:\\Git\\Case-Closed\\assets\\scripts\\casevalue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\casevalue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|D:\\Git\\Case-Closed\\assets\\scripts\\interactions\\interaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\interactions\\interaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|D:\\Git\\Case-Closed\\assets\\scripts\\interaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\interaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|D:\\Git\\Case-Closed\\assets\\scripts\\interactions\\casevalueinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\interactions\\casevalueinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|D:\\Git\\Case-Closed\\assets\\scripts\\newscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\newscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|D:\\Git\\Case-Closed\\assets\\scripts\\interactions\\dialogueinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\interactions\\dialogueinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Git\\Case-Closed\\Library\\PackageCache\\com.unity.ugui@a9eaa85fb1b8\\Runtime\\UGUI\\UI\\Core\\Button.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Library\\PackageCache\\com.unity.ugui@a9eaa85fb1b8\\Runtime\\UGUI\\UI\\Core\\Button.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|D:\\Git\\Case-Closed\\assets\\scripts\\savedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\savedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|D:\\Git\\Case-Closed\\assets\\scripts\\interactions\\dialogue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\interactions\\dialogue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|D:\\Git\\Case-Closed\\assets\\scripts\\settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|D:\\Git\\Case-Closed\\assets\\scripts\\interactions\\destroyable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\interactions\\destroyable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|D:\\Git\\Case-Closed\\assets\\scripts\\caseitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\caseitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|D:\\Git\\Case-Closed\\assets\\scripts\\caseitemtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\caseitemtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|D:\\Git\\Case-Closed\\assets\\scripts\\interactions\\blockcanvas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\interactions\\blockcanvas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|D:\\Git\\Case-Closed\\assets\\scripts\\interactions\\blockade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87C59F5D-6DFC-DD33-26DA-60944B308AE3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\interactions\\blockade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -81,232 +117,343 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 173,
-          "SelectedChildIndex": 0,
+          "DockedWidth": 161,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "AudioManager.cs",
-              "DocumentMoniker": "D:\\Git\\Case-Closed\\Assets\\Scripts\\AudioManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\AudioManager.cs",
-              "ToolTip": "D:\\Git\\Case-Closed\\Assets\\Scripts\\AudioManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\AudioManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAdAAAA",
+              "DocumentMoniker": "D:\\Git\\Case-Closed\\Assets\\Scripts\\Audio\\AudioManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Audio\\AudioManager.cs",
+              "ToolTip": "D:\\Git\\Case-Closed\\Assets\\Scripts\\Audio\\AudioManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Audio\\AudioManager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T16:16:43.482Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-05T17:42:07.663Z",
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "CaseValue.cs",
-              "DocumentMoniker": "D:\\Git\\Case-Closed\\Assets\\Scripts\\CaseValue.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\CaseValue.cs",
-              "ToolTip": "D:\\Git\\Case-Closed\\Assets\\Scripts\\CaseValue.cs",
-              "RelativeToolTip": "Assets\\Scripts\\CaseValue.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAABaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-12T10:46:37.749Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MainMenu.cs",
-              "DocumentMoniker": "D:\\Git\\Case-Closed\\Assets\\Scripts\\MainMenu.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\MainMenu.cs",
-              "ToolTip": "D:\\Git\\Case-Closed\\Assets\\Scripts\\MainMenu.cs",
-              "RelativeToolTip": "Assets\\Scripts\\MainMenu.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-12T10:46:46.117Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "CaseHandler.cs",
               "DocumentMoniker": "D:\\Git\\Case-Closed\\Assets\\Scripts\\CaseHandler.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\CaseHandler.cs",
               "ToolTip": "D:\\Git\\Case-Closed\\Assets\\Scripts\\CaseHandler.cs",
               "RelativeToolTip": "Assets\\Scripts\\CaseHandler.cs",
-              "ViewState": "AQIAAMUAAAAAAAAAAAAowAsBAAArAAAA",
+              "ViewState": "AQIAAKwAAAAAAAAAAAAvwMIAAAA7AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-12T10:46:15.771Z"
+              "WhenOpened": "2025-05-05T17:15:46.152Z",
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "BlockCanvas.cs",
-              "DocumentMoniker": "D:\\Git\\Case-Closed\\Assets\\Scripts\\BlockCanvas.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\BlockCanvas.cs",
-              "ToolTip": "D:\\Git\\Case-Closed\\Assets\\Scripts\\BlockCanvas.cs",
-              "RelativeToolTip": "Assets\\Scripts\\BlockCanvas.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC8AAAAVAAAA",
+              "DocumentIndex": 4,
+              "Title": "PlayedLevels.cs",
+              "DocumentMoniker": "D:\\Git\\Case-Closed\\Assets\\Scripts\\PlayedLevels.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayedLevels.cs",
+              "ToolTip": "D:\\Git\\Case-Closed\\Assets\\Scripts\\PlayedLevels.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayedLevels.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAABKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-14T12:08:24.91Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Interaction.cs",
-              "DocumentMoniker": "D:\\Git\\Case-Closed\\Assets\\Scripts\\Interaction.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Interaction.cs",
-              "ToolTip": "D:\\Git\\Case-Closed\\Assets\\Scripts\\Interaction.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Interaction.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-12T10:46:42.613Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Level.cs",
-              "DocumentMoniker": "D:\\Git\\Case-Closed\\Assets\\Scripts\\Level.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Level.cs",
-              "ToolTip": "D:\\Git\\Case-Closed\\Assets\\Scripts\\Level.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Level.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-12T10:46:45.007Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Blockade.cs",
-              "DocumentMoniker": "D:\\Git\\Case-Closed\\Assets\\Scripts\\Blockade.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Blockade.cs",
-              "ToolTip": "D:\\Git\\Case-Closed\\Assets\\Scripts\\Blockade.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Blockade.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-14T11:58:06.95Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "SaveData.cs",
-              "DocumentMoniker": "D:\\Git\\Case-Closed\\Assets\\Scripts\\SaveData.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\SaveData.cs",
-              "ToolTip": "D:\\Git\\Case-Closed\\Assets\\Scripts\\SaveData.cs",
-              "RelativeToolTip": "Assets\\Scripts\\SaveData.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T12:29:08.347Z"
+              "WhenOpened": "2025-05-11T04:31:29.44Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Saver.cs",
-              "DocumentMoniker": "D:\\Git\\Case-Closed\\Assets\\Scripts\\Saver.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Saver.cs",
-              "ToolTip": "D:\\Git\\Case-Closed\\Assets\\Scripts\\Saver.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Saver.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAwAAAA",
+              "Title": "InteractableCanvas.cs",
+              "DocumentMoniker": "D:\\Git\\Case-Closed\\Assets\\Scripts\\Interactions\\InteractableCanvas.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Interactions\\InteractableCanvas.cs",
+              "ToolTip": "D:\\Git\\Case-Closed\\Assets\\Scripts\\Interactions\\InteractableCanvas.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Interactions\\InteractableCanvas.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T12:45:38.868Z"
+              "WhenOpened": "2025-05-08T06:01:19.027Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "LevelCanvas.cs",
-              "DocumentMoniker": "D:\\Git\\Case-Closed\\Assets\\Scripts\\LevelCanvas.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\LevelCanvas.cs",
-              "ToolTip": "D:\\Git\\Case-Closed\\Assets\\Scripts\\LevelCanvas.cs",
-              "RelativeToolTip": "Assets\\Scripts\\LevelCanvas.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAA2AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-12T12:26:44.153Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ChangeScene.cs",
-              "DocumentMoniker": "D:\\Git\\Case-Closed\\Assets\\Scripts\\ChangeScene.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\ChangeScene.cs",
-              "ToolTip": "D:\\Git\\Case-Closed\\Assets\\Scripts\\ChangeScene.cs",
-              "RelativeToolTip": "Assets\\Scripts\\ChangeScene.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-12T10:46:40.232Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "NewScene.cs",
-              "DocumentMoniker": "D:\\Git\\Case-Closed\\Assets\\Scripts\\NewScene.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\NewScene.cs",
-              "ToolTip": "D:\\Git\\Case-Closed\\Assets\\Scripts\\NewScene.cs",
-              "RelativeToolTip": "Assets\\Scripts\\NewScene.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABCAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-12T10:46:47.186Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 7,
               "Title": "CaseItemType.cs",
               "DocumentMoniker": "D:\\Git\\Case-Closed\\Assets\\Scripts\\CaseItemType.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\CaseItemType.cs",
               "ToolTip": "D:\\Git\\Case-Closed\\Assets\\Scripts\\CaseItemType.cs",
               "RelativeToolTip": "Assets\\Scripts\\CaseItemType.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-12T10:46:36.329Z"
+              "WhenOpened": "2025-05-03T16:34:58.797Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "CaseItem.cs",
-              "DocumentMoniker": "D:\\Git\\Case-Closed\\Assets\\Scripts\\CaseItem.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\CaseItem.cs",
-              "ToolTip": "D:\\Git\\Case-Closed\\Assets\\Scripts\\CaseItem.cs",
-              "RelativeToolTip": "Assets\\Scripts\\CaseItem.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACkAAAAuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-12T10:46:34.426Z"
-            }
-          ]
-        },
-        {
-          "DockedWidth": 227,
-          "SelectedChildIndex": 2,
-          "Children": [
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "CaseValueInteraction.cs",
-              "DocumentMoniker": "D:\\Git\\Case-Closed\\Assets\\Scripts\\CaseValueInteraction.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\CaseValueInteraction.cs",
-              "ToolTip": "D:\\Git\\Case-Closed\\Assets\\Scripts\\CaseValueInteraction.cs",
-              "RelativeToolTip": "Assets\\Scripts\\CaseValueInteraction.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Title": "MainMenu.cs",
+              "DocumentMoniker": "D:\\Git\\Case-Closed\\Assets\\Scripts\\MainMenu.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\MainMenu.cs",
+              "ToolTip": "D:\\Git\\Case-Closed\\Assets\\Scripts\\MainMenu.cs",
+              "RelativeToolTip": "Assets\\Scripts\\MainMenu.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC8AAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-12T10:46:39.063Z",
+              "WhenOpened": "2025-05-05T16:57:26.032Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "GameHandler.cs",
-              "DocumentMoniker": "D:\\Git\\Case-Closed\\Assets\\Scripts\\GameHandler.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\GameHandler.cs",
-              "ToolTip": "D:\\Git\\Case-Closed\\Assets\\Scripts\\GameHandler.cs",
-              "RelativeToolTip": "Assets\\Scripts\\GameHandler.cs",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAowAsAAAAmAAAA",
+              "DocumentIndex": 11,
+              "Title": "LevelInformation.cs",
+              "DocumentMoniker": "D:\\Git\\Case-Closed\\Assets\\Scripts\\LevelInformation.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\LevelInformation.cs",
+              "ToolTip": "D:\\Git\\Case-Closed\\Assets\\Scripts\\LevelInformation.cs",
+              "RelativeToolTip": "Assets\\Scripts\\LevelInformation.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-12T10:46:41.57Z"
+              "WhenOpened": "2025-05-07T17:56:10.821Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 8,
+              "Title": "DialogueManager.cs",
+              "DocumentMoniker": "D:\\Git\\Case-Closed\\Assets\\Scripts\\Interactions\\DialogueManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Interactions\\DialogueManager.cs",
+              "ToolTip": "D:\\Git\\Case-Closed\\Assets\\Scripts\\Interactions\\DialogueManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Interactions\\DialogueManager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEMAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T21:57:47.911Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CaseValue.cs",
+              "DocumentMoniker": "D:\\Git\\Case-Closed\\Assets\\Scripts\\Interactions\\CaseValue.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Interactions\\CaseValue.cs",
+              "ToolTip": "D:\\Git\\Case-Closed\\Assets\\Scripts\\Interactions\\CaseValue.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Interactions\\CaseValue.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAQwEAAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T17:12:25.781Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "PlayerMovement.cs",
               "DocumentMoniker": "D:\\Git\\Case-Closed\\Assets\\Scripts\\PlayerMovement.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerMovement.cs",
               "ToolTip": "D:\\Git\\Case-Closed\\Assets\\Scripts\\PlayerMovement.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerMovement.cs",
-              "ViewState": "AQIAADUAAAAAAAAAAAAwwGMAAAAiAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAABGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-12T10:46:48.305Z",
+              "WhenOpened": "2025-05-03T23:22:22.789Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Button.cs",
+              "DocumentMoniker": "D:\\Git\\Case-Closed\\Library\\PackageCache\\com.unity.ugui@a9eaa85fb1b8\\Runtime\\UGUI\\UI\\Core\\Button.cs",
+              "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.ugui@a9eaa85fb1b8\\Runtime\\UGUI\\UI\\Core\\Button.cs",
+              "ToolTip": "D:\\Git\\Case-Closed\\Library\\PackageCache\\com.unity.ugui@a9eaa85fb1b8\\Runtime\\UGUI\\UI\\Core\\Button.cs",
+              "RelativeToolTip": "Library\\PackageCache\\com.unity.ugui@a9eaa85fb1b8\\Runtime\\UGUI\\UI\\Core\\Button.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEUAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-07T21:51:07.04Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "DialogueInteraction.cs",
+              "DocumentMoniker": "D:\\Git\\Case-Closed\\Assets\\Scripts\\Interactions\\DialogueInteraction.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Interactions\\DialogueInteraction.cs",
+              "ToolTip": "D:\\Git\\Case-Closed\\Assets\\Scripts\\Interactions\\DialogueInteraction.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Interactions\\DialogueInteraction.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T21:55:08.179Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Saver.cs",
+              "DocumentMoniker": "D:\\Git\\Case-Closed\\Assets\\Scripts\\Saver.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Saver.cs",
+              "ToolTip": "D:\\Git\\Case-Closed\\Assets\\Scripts\\Saver.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Saver.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwBMAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T21:21:52.828Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ChangeScene.cs",
+              "DocumentMoniker": "D:\\Git\\Case-Closed\\Assets\\Scripts\\ChangeScene.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ChangeScene.cs",
+              "ToolTip": "D:\\Git\\Case-Closed\\Assets\\Scripts\\ChangeScene.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ChangeScene.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T16:34:59.889Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "CaseValueInteraction.cs",
+              "DocumentMoniker": "D:\\Git\\Case-Closed\\Assets\\Scripts\\Interactions\\CaseValueInteraction.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Interactions\\CaseValueInteraction.cs",
+              "ToolTip": "D:\\Git\\Case-Closed\\Assets\\Scripts\\Interactions\\CaseValueInteraction.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Interactions\\CaseValueInteraction.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T22:26:09.184Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Interaction.cs",
+              "DocumentMoniker": "D:\\Git\\Case-Closed\\Assets\\Scripts\\Interactions\\Interaction.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Interactions\\Interaction.cs",
+              "ToolTip": "D:\\Git\\Case-Closed\\Assets\\Scripts\\Interactions\\Interaction.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Interactions\\Interaction.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T21:46:44.55Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "LevelCanvas.cs",
+              "DocumentMoniker": "D:\\Git\\Case-Closed\\Assets\\Scripts\\Interactions\\LevelCanvas.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Interactions\\LevelCanvas.cs",
+              "ToolTip": "D:\\Git\\Case-Closed\\Assets\\Scripts\\Interactions\\LevelCanvas.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Interactions\\LevelCanvas.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T23:33:38.661Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Settings.cs",
+              "DocumentMoniker": "D:\\Git\\Case-Closed\\Assets\\Scripts\\Settings.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Settings.cs",
+              "ToolTip": "D:\\Git\\Case-Closed\\Assets\\Scripts\\Settings.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Settings.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAQwBMAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T20:14:03.581Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "SaveData.cs",
+              "DocumentMoniker": "D:\\Git\\Case-Closed\\Assets\\Scripts\\SaveData.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\SaveData.cs",
+              "ToolTip": "D:\\Git\\Case-Closed\\Assets\\Scripts\\SaveData.cs",
+              "RelativeToolTip": "Assets\\Scripts\\SaveData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-07T17:35:24.293Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Dialogue.cs",
+              "DocumentMoniker": "D:\\Git\\Case-Closed\\Assets\\Scripts\\Interactions\\Dialogue.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Interactions\\Dialogue.cs",
+              "ToolTip": "D:\\Git\\Case-Closed\\Assets\\Scripts\\Interactions\\Dialogue.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Interactions\\Dialogue.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T23:05:49.119Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "CaseItem.cs",
+              "DocumentMoniker": "D:\\Git\\Case-Closed\\Assets\\Scripts\\CaseItem.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CaseItem.cs",
+              "ToolTip": "D:\\Git\\Case-Closed\\Assets\\Scripts\\CaseItem.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CaseItem.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADYAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T16:34:57.222Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Destroyable.cs",
+              "DocumentMoniker": "D:\\Git\\Case-Closed\\Assets\\Scripts\\Interactions\\Destroyable.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Interactions\\Destroyable.cs",
+              "ToolTip": "D:\\Git\\Case-Closed\\Assets\\Scripts\\Interactions\\Destroyable.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Interactions\\Destroyable.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T17:04:37.563Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "BlockCanvas.cs",
+              "DocumentMoniker": "D:\\Git\\Case-Closed\\Assets\\Scripts\\Interactions\\BlockCanvas.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Interactions\\BlockCanvas.cs",
+              "ToolTip": "D:\\Git\\Case-Closed\\Assets\\Scripts\\Interactions\\BlockCanvas.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Interactions\\BlockCanvas.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACsAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T17:03:37.821Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Blockade.cs",
+              "DocumentMoniker": "D:\\Git\\Case-Closed\\Assets\\Scripts\\Interactions\\Blockade.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Interactions\\Blockade.cs",
+              "ToolTip": "D:\\Git\\Case-Closed\\Assets\\Scripts\\Interactions\\Blockade.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Interactions\\Blockade.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwBIAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T17:03:20.121Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 247,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "LevelAudioManager.cs",
+              "DocumentMoniker": "D:\\Git\\Case-Closed\\Assets\\Scripts\\Audio\\LevelAudioManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Audio\\LevelAudioManager.cs",
+              "ToolTip": "D:\\Git\\Case-Closed\\Assets\\Scripts\\Audio\\LevelAudioManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Audio\\LevelAudioManager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T17:41:46.338Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CaseAudioManager.cs",
+              "DocumentMoniker": "D:\\Git\\Case-Closed\\Assets\\Scripts\\Audio\\CaseAudioManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Audio\\CaseAudioManager.cs",
+              "ToolTip": "D:\\Git\\Case-Closed\\Assets\\Scripts\\Audio\\CaseAudioManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Audio\\CaseAudioManager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADUAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T17:41:45.217Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GameHandler.cs",
+              "DocumentMoniker": "D:\\Git\\Case-Closed\\Assets\\Scripts\\GameHandler.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GameHandler.cs",
+              "ToolTip": "D:\\Git\\Case-Closed\\Assets\\Scripts\\GameHandler.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GameHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACQAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T22:55:39.406Z",
               "EditorCaption": ""
             }
           ]

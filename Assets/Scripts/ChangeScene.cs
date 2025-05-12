@@ -4,14 +4,19 @@ using UnityEngine;
 
 public class ChangeScene : MonoBehaviour
 {
-    public CaseValue CaseValue;
 
-    public void LoadScene() {
-        GameHandler.LoadScene(CaseValue);
+    public void LoadScene(CaseValue c) {
+        GameHandler.Case = c;
+        GameHandler.LoadScene();
+    }
+
+    public void LoadSceneWithPosition(CaseValue c) {
+        GameHandler.PlayerPosition = GameObject.FindGameObjectWithTag("Player").gameObject.transform.position;
+        LoadScene(c);
     }
 
     public void LoadSceneWithPosition() {
         GameHandler.PlayerPosition = GameObject.FindGameObjectWithTag("Player").gameObject.transform.position;
-        LoadScene();
+        LoadScene(GameHandler.Case);
     }
 }

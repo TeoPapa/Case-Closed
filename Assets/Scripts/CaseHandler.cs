@@ -21,27 +21,21 @@ public class CaseHandler : MonoBehaviour {
     public TMP_Text Description;
 
     [Header("The Buttons Of The Case")]
-    public GameObject LocationBtn;
-    public GameObject WeaponBtn;
-    public GameObject StolenBtn;
-    public GameObject PeopleBtn;
+    public List<GameObject> TypesButton; //0: Location, 1: Weapons, 2: Items, 3: People
 
     [Header("The Panels Of Each Button")]
-    public GameObject LocationPanel;
-    public GameObject WeaponPanel;
-    public GameObject StolenPanel;
-    public GameObject PeoplePanel;
+    public List<GameObject> Panels; //0: Location, 1: Weapons, 2: Items, 3: People
 
     [Header("The Parent Of Each Page")]
-    public GameObject LocationParent;
-    public GameObject WeaponParent;
-    public GameObject StolenParent;
-    public GameObject PeopleParent;
+    public List<GameObject> Parents; //0: Location, 1: Weapons, 2: Items, 3: People
+
+    public GameObject Scroll;
 
     [Header("The Objects Of Each Item")]
     public GameObject Life1;
     public GameObject Life2;
     public GameObject Life3;
+
     int Lives = 3;
 
     [Header("The Ready And Investigation Buttons")]
@@ -80,7 +74,18 @@ public class CaseHandler : MonoBehaviour {
     public GameObject OpenPanel;
     public GameObject OpenButton;
 
+    public CaseValue CurrentCase;
+
     public void Start() {
+        List<GridLayoutGroup> Groups = new List<GridLayoutGroup>();
+
+
+        foreach(GameObject o in Parents) {
+            Groups.Add(o.GetComponent<GridLayoutGroup>());
+        }
+
+        CurrentCase = GameHandler.Case;
+
         OpenPanel.SetActive(true);
         OpenButton.SetActive(true);
 
@@ -90,77 +95,38 @@ public class CaseHandler : MonoBehaviour {
         currFoundtxt.GetComponent<TMP_Text>().text = "0";
         cuurentItems.GetComponent<TMP_Text>().text = "0";
 
-        LocationBtn.SetActive(true);
-        WeaponBtn.SetActive(true);
-        StolenBtn.SetActive(true);
-        PeopleBtn.SetActive(true);
+        foreach(GameObject o in TypesButton)
+            o.gameObject.SetActive(true);
 
-        LocationPanel.SetActive(true);
-        WeaponPanel.SetActive(true);
-        StolenPanel.SetActive(true);
-        PeoplePanel.SetActive(true);
+        foreach(GameObject o in Panels)
+            o.gameObject.SetActive(true);
 
 
-        CaseNum.text = GameHandler.Case.Level.getNumber().ToString();
-        Description.text = GameHandler.Case.Description;
+        CaseNum.text = CurrentCase.Level.getNumber().ToString();
+        Description.text = CurrentCase.Description;
 
         Life1.SetActive(true);
         Life2.SetActive(true);
         Life3.SetActive(true);
 
-        foreach (CaseItemType i in GameHandler.Case.Location) {
-            Everything++;
-            if(i.isInCase())
-                AllTheObjects++;
-
-            GameObject o = Instantiate(CaseItemPrefab, LocationParent.transform, LocationParent);
-            o.GetComponent<CaseItem>().ObjectCreated(i);
-        }
-
-        foreach (CaseItemType i in GameHandler.Case.Weapons) {
+        foreach (CaseItemType i in CurrentCase.CaseList) {
             Everything++;
             if (i.isInCase())
                 AllTheObjects++;
-
-            GameObject o = Instantiate(CaseItemPrefab, WeaponParent.transform, WeaponParent);
+            GameObject o = Instantiate(CaseItemPrefab, (RectTransform)Parents[i.Type].transform);
             o.GetComponent<CaseItem>().ObjectCreated(i);
         }
-
-        foreach (CaseItemType i in GameHandler.Case.StolenItems) {
-            Everything++;
-            if (i.isInCase())
-                AllTheObjects++;
-
-            GameObject o = Instantiate(CaseItemPrefab, StolenParent.transform, StolenParent);
-            o.GetComponent<CaseItem>().ObjectCreated(i);
-        }
-
-        foreach (CaseItemType i in GameHandler.Case.People) {
-            Everything++;
-            if (i.isInCase())
-                AllTheObjects++;
-
-            GameObject o = Instantiate(CaseItemPrefab, PeopleParent.transform, PeopleParent);
-            o.GetComponent<CaseItem>().ObjectCreated(i);
-        }
-
-        LocationPanel.SetActive(false);
-        WeaponPanel.SetActive(false);
-        StolenPanel.SetActive(false);
-        PeoplePanel.SetActive(false);
 
        allobjtxt.GetComponent<TMP_Text>().text = AllTheObjects.ToString();
        AllItems.GetComponent<TMP_Text>().text = Everything.ToString();
 
         ChangeColors(Mode);
 
-        if (GameHandler.Case.Location.Count <= 0) LocationBtn.SetActive(false);
+        for (int i = 0; i < TypesButton.Count; i++) {
+            if(CurrentCase.getCount(i) <= 0) TypesButton[i].gameObject.SetActive(false);
 
-        if (GameHandler.Case.Weapons.Count <= 0) WeaponBtn.SetActive(false);
-
-        if (GameHandler.Case.StolenItems.Count <= 0) StolenBtn.SetActive(false);
-
-        if (GameHandler.Case.People.Count <= 0) PeopleBtn.SetActive(false);
+            Panels[i].gameObject.SetActive(false);
+        }
     }
 
     public void Open() {
@@ -175,6 +141,7 @@ public class CaseHandler : MonoBehaviour {
         OpenPanel.SetActive(false);
     }
     public void switchMode(bool mode) {
+        FindFirstObjectByType<CaseAudioManager>().ChangeMode();
         Mode = mode;
         ChangeColors(Mode);
     }
@@ -225,6 +192,7 @@ public class CaseHandler : MonoBehaviour {
 
     public void GameLost() {
         EndScreen.SetActive(true);
+        FindFirstObjectByType<CaseAudioManager>().Win(false);
     }
 
     public void FoundItem(bool b) {
@@ -238,7 +206,6 @@ public class CaseHandler : MonoBehaviour {
 
         if (b != Mode) {
             loseLife();
-            return;
         }
 
         if (FoundItems == Everything) {
@@ -248,8 +215,6 @@ public class CaseHandler : MonoBehaviour {
     }
 
     IEnumerator waiter() {
-
-        //yield on a new YieldInstruction that waits for 5 seconds.
         yield return new WaitForSeconds(.5f);
 
 
@@ -257,16 +222,17 @@ public class CaseHandler : MonoBehaviour {
     }
 
     void GameWon() {
+        FindFirstObjectByType<CaseAudioManager>().Win(true);
         WinScreen.SetActive(true);
 
         for (int i = 0; i < Lives; i++) {
             GameObject o = Instantiate(HintsPrefab, HintsParent.transform, HintsParent);
         }
 
-        int gain = GameHandler.CloseCase(GameHandler.Case.Level, Lives);
+        int gain = GameHandler.CloseCase(CurrentCase.Level, Lives);
         MoneyRec.GetComponent<TMP_Text>().text = gain.ToString();
         GameHandler.hasPlayedBefore = true;
-        Saver.Save();
+        Saver.Save("LevelScene");
 
     }
 }
