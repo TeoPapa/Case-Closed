@@ -15,7 +15,7 @@ public class Settings : MonoBehaviour
     public GameObject TestingPanel;
     public TMP_Text Money;
 
-    private void Start() {
+    protected void Start() {
         SettingsPanel.SetActive(false);
         TestingPanel.SetActive(false);
     }
@@ -87,7 +87,7 @@ public class Settings : MonoBehaviour
 
         GameHandler.hasPlayedBefore = false;
 
-        GameHandler.PlayerPosition = new Vector3(-14f, -9f, 0);
+        GameHandler.PlayerPosition = new Vector3(-241f, 34f, 0);
 
         GameHandler.DestroyedStuff = new List<int>();
 
@@ -107,5 +107,7 @@ public class Settings : MonoBehaviour
     public void SceneCh() {
         SceneManager.LoadScene("MainMenu");
     }
+
+    
 }
 

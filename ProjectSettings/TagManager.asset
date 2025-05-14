@@ -8,6 +8,8 @@ TagManager:
   - UserInterfaceButtons
   - Cobble
   - Grass
+  - Wood
+  - InterfaceCanvas
   layers:
   - Default
   - TransparentFX

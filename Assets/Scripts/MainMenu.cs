@@ -15,8 +15,6 @@ public class MainMenu : MonoBehaviour
 
     public CaseValue TutorialCase; //The first case of the game
 
-    public string DefaultName = "Martin";
-
 
 
     public void Start() {
@@ -44,9 +42,9 @@ public class MainMenu : MonoBehaviour
 
     public void NameSet() {
        string name = Name.text;
+        
+       if(name.Length <= 1) return;
 
-        if(name.Equals("")) name = DefaultName;
-
-        GameHandler.PlayerName = Name.text;
+       GameHandler.PlayerName = Name.text;
     }
 }

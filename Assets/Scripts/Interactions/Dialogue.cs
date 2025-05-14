@@ -30,14 +30,17 @@ public class Dialogue{
     }
 
     public string getName() {
-        if (Name == "*") return "";
+        if (Name == "**") return "";
 
-        if (Name == "**") return GameHandler.PlayerName;
+        if (Name == "*") return GameHandler.PlayerName;
 
         return Name;
     }
 
     public string getAnswer() {
+        if (Answer.Contains("*"))
+            Answer = Answer.Replace("*", GameHandler.PlayerName);
+
         if(Answer.Length > 309) return Answer.Substring(0, 309);
         return Answer;
     }

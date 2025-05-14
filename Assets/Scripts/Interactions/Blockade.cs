@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -7,11 +8,11 @@ public class Blockade : Interaction
 {
     public int BlockadeCost;
     public string Description;
-    public Destroyable dest;
+    public List<Destroyable> dest;
 
     protected override void PlayerInteraction() {
         this.gameObject.AddComponent<Destroyable>();
-        dest = this.GetComponent<Destroyable>();
+        dest.Add( this.GetComponent<Destroyable>());
         int x = 0;
         try {
             x = GameHandler.DestroyedStuff[GameHandler.DestroyedStuff.Count - 1];
@@ -20,9 +21,7 @@ public class Blockade : Interaction
             Debug.LogException(e);
         }
 
-        Debug.Log(x);
-
-        dest.DestroyableID = x + 1;
+        dest[dest.Count-1].DestroyableID = x + 1;
     }
 
     protected override string setBubble() {

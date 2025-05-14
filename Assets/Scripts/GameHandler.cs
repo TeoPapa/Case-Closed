@@ -10,14 +10,15 @@ using UnityEngine.SceneManagement;
  */
 public class GameHandler : MonoBehaviour
 {
-    public static string PlayerName = "Markus Tinara";
+    public static int MovementMode = 1; //1: Joystick, 2: Arrow Keys
+    public static string PlayerName = "Markus";
 
     public static int Money; //The money of the player
     public static int moneyValue = 5; //The value of each life in the game
 
     public static bool hasPlayedBefore = false; //If the player plays for the first time
 
-    public static Vector3 PlayerPosition = new Vector3(-14f, -9f, 0); //The position that the player loads
+    public static Vector3 PlayerPosition = new Vector3(-241f, 34f, 0); //The position that the player loads
                                                                       //in the LevelScene (Initialized to
                                                                       //a centered place)
 

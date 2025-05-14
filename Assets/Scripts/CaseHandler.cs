@@ -226,7 +226,7 @@ public class CaseHandler : MonoBehaviour {
         WinScreen.SetActive(true);
 
         for (int i = 0; i < Lives; i++) {
-            GameObject o = Instantiate(HintsPrefab, HintsParent.transform, HintsParent);
+            GameObject o = Instantiate(HintsPrefab, HintsParent.transform);
         }
 
         int gain = GameHandler.CloseCase(CurrentCase.Level, Lives);

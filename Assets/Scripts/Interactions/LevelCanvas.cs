@@ -44,7 +44,7 @@ public class LevelCanvas : InteractableCanvas {
         if (!(hbp == null)) {
 
             for (int i = 0; i < (hbp.getMoney() / GameHandler.moneyValue); i++) {
-                GameObject o = Instantiate(Lives, LivesParent.transform, LivesParent);
+                GameObject o = Instantiate(Lives, LivesParent.transform);
             }
         } else
             hbp = Case.Level;

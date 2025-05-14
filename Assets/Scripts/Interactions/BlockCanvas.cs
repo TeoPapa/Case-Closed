@@ -42,7 +42,8 @@ public class BlockCanvas : InteractableCanvas
         Blockade des = (Blockade)Inter;
 
         GameHandler.Money -= des.BlockadeCost;
-        des.dest.DestroyMe(true);
+        foreach(Destroyable d in des.dest)
+            d.DestroyMe(true);
         Close();
     }
 }

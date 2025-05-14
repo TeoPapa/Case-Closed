@@ -20,4 +20,12 @@ public class CaseValueInteraction : Interaction
     protected override string setBubble() {
         return "Level " + Case.Level.getNumber();
     }
+
+    private void OnEnable() {
+        if (Case == null) {
+            Debug.Log("Null");
+            return;
+        }
+        Debug.Log(Case.Level.getNumber());
+    }
 }

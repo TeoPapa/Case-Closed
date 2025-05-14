@@ -20,7 +20,14 @@ public abstract class InteractableCanvas : MonoBehaviour {
     public void Close() {
         FindFirstObjectByType<PlayerMovement>().CanMove = true;
         CloseCanvas();
-        Inter.InteractionEnded();
+        try {
+            Inter.InteractionEnded();
+        }
+        catch (NullReferenceException e) {
+            Debug.Log(e.ToString());
+        }
+
+        Inter = null;
         Panel.SetActive(false);
     }
 

@@ -64,4 +64,31 @@ public class CaseValue : MonoBehaviour {
 
         return count;
     }
+
+    private void OnEnable() {
+        if (!(Level == null)) return;
+
+        Level = new Level(LevelNum, Description);
+        Locations = 0;
+        Weapons = 0;
+        Items = 0;
+        People = 0;
+
+        foreach (CaseItemType i in CaseList) {
+            switch (i.Type) {
+                case 0:
+                    Locations++;
+                    break;
+                case 1:
+                    Weapons++;
+                    break;
+                case 2:
+                    Items++;
+                    break;
+                case 3:
+                    People++;
+                    break;
+            }
+        }
+    }
 }

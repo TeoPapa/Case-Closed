@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
 
     public GameObject TutorialCanvas;
 
-    Animator PlayerAnimator; //The Player's Animator
+    public Animator PlayerAnimator; //The Player's Animator
 
     float GetX; //Variables that hold the current
     float GetY; //movement values of X and Y
@@ -28,13 +28,16 @@ public class PlayerMovement : MonoBehaviour
 
     Interaction currInt; //The current interaction that the player can interact with
 
+    private void Awake() {
+        GameHandler.DestroyItems(); //Destroys all already interacted destroyable items
+    }
 
     void Start() {
-        Debug.Log(GameHandler.hasPlayedBefore);
+        Debug.Log("Destroyed:" + GameHandler.DestroyedStuff.Count);
 
-        if(!GameHandler.hasPlayedBefore) TutorialCanvas.SetActive(true);
-
-        PlayerAnimator = this.GetComponent<Animator>(); //Initializes the Animator with the Player's component
+        if (GameHandler.LevelsPlayed.Count > 1) {
+            TutorialCanvas.SetActive(false);
+        }
 
         BubbleCanvas.SetActive(false);
         currInt = null;
@@ -42,7 +45,6 @@ public class PlayerMovement : MonoBehaviour
         this.gameObject.transform.position = GameHandler.PlayerPosition; //Sets the player position accordingly to GameHandler
 
         ChangeMoney(GameHandler.Money); //Shows in UI how much money the player has
-        GameHandler.DestroyItems(); //Destroys all already interacted destroyable items
     }
 
     private void FixedUpdate() {
