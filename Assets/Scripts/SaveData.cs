@@ -10,6 +10,8 @@ using UnityEngine;
 [System.Serializable]
 public class SaveData
 {
+    public int MovementMode; //The movement scheme the player prefers
+
     public string Name; //The name of the player
 
     public int Money; //The money of the player
@@ -28,6 +30,7 @@ public class SaveData
      * and converts it to basic saving types (int, float, bool etc).
      */
     public SaveData() {
+        MovementMode = GameHandler.MovementMode;
         Name = GameHandler.PlayerName;//Name and Money
         Money = GameHandler.Money;    //need no conversion
 

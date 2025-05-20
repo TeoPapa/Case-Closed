@@ -24,6 +24,9 @@ public class LevelCanvas : InteractableCanvas {
 
     protected override void CloseCanvas() {
         GameHandler.Case = null;
+
+        foreach (Transform child in LivesParent.transform)
+            Destroy(child.gameObject);
     }
 
     protected override void OpenCanvas() {

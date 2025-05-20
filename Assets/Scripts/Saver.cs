@@ -17,8 +17,7 @@ using System.Runtime.Serialization;
 public class Saver
 {
     static string FileName = "/data.game";
-    public static void Save(string scene) {
-        GameHandler.DefaultScene = scene;
+    public static void Save() {
         BinaryFormatter bf = new BinaryFormatter();
         string path = Application.persistentDataPath + FileName;
         FileStream stream = new FileStream(path, FileMode.Create);

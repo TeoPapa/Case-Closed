@@ -73,13 +73,14 @@ public class DialogueManager : InteractableCanvas {
     }
 
     protected override void OpenCanvas() {
-        if(Inter == null) return;
+        if(Inter == null || IsSpeaking) return;
 
         DialogueInteraction diaint = (DialogueInteraction)Inter;
         StartDialogue(diaint.CurrentDialogue());
     }
 
     public void OpenCanvas(List<Dialogue> dialogs) {
+        if(IsSpeaking) return;
         Open();
         StartDialogue(dialogs);
     }

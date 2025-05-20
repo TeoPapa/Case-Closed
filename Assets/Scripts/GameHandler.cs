@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using System;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -25,6 +26,7 @@ public class GameHandler : MonoBehaviour
     public static List<int> DestroyedStuff = new List<int>(); //All the destroyed objects (by ID) (Objects
                                                               //that the player has already interacted and
                                                               //can be destroyed)
+    public static List<int> EnabledStuff = new List<int>();
 
     public static CaseValue Case; //The current Case that is going to Load to the CaseScene
 
@@ -66,6 +68,16 @@ public class GameHandler : MonoBehaviour
         return moneyWon;
     }
 
+    public static void EnableItems() {
+        List<Enablable> e = new List<Enablable>();
+        e.AddRange(FindObjectsByType<Enablable>(FindObjectsSortMode.None));
+
+        foreach (Enablable en in e) {
+            if (DestroyedStuff.Contains(en.EnableID))
+                en.EnableMe(false);
+        }
+    }
+
     /* T
      */
     public static void DestroyItems() {
@@ -78,12 +90,34 @@ public class GameHandler : MonoBehaviour
         }
     }
 
+    public static void Save(bool FromCase) {
+        Vector3 PlayerPos = new Vector3();
+            
+        try {
+            PlayerPos = FindFirstObjectByType<PlayerMovement>().transform.position;
+        }
+        catch (NullReferenceException e){
+            Debug.Log(e.ToString());
+        }
+
+        if(!hasPlayedBefore || FromCase) {
+            PlayerPos = GameHandler.PlayerPosition;
+            hasPlayedBefore = true;
+        }
+
+        PlayerPosition = PlayerPos;
+        Saver.Save();
+    }
+
     public static void Load() {
         SaveData data = Saver.Load();
 
         if (data == null) {
             return;
         }
+        MovementMode = data.MovementMode;
+
+        PlayerName = data.Name;
 
         Money = data.Money;
 
@@ -95,10 +129,12 @@ public class GameHandler : MonoBehaviour
 
         DestroyedStuff.AddRange(data.DestroyedObjects);
 
-        int[,] Lvls = data.LevelsPlayed;
+        LevelsPlayed.Clear();
 
-        for(int i = 0; i < Lvls.GetLength(0); i++) {
-            LevelsPlayed.Add(new Level(Lvls[i,0], Lvls[i,1]));
+        int[,] Lvls = data.LevelsPlayed;
+        
+        for (int i = 0; i < Lvls.GetLength(0); i++) {
+            LevelsPlayed.Add(new Level(Lvls[i, 0], Lvls[i, 1]));
         }
 
         if (hasPlayedBefore) DefaultScene = "LevelScene";

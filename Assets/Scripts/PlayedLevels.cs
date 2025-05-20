@@ -20,6 +20,7 @@ public class PlayedLevels : MonoBehaviour
     }
 
     public void OpenLevels() {
+        Debug.Log("Played Count: " + GameHandler.LevelsPlayed.Count);
         LevelsPanel.SetActive(true);
         List<Level> Levels = GameHandler.LevelsPlayed;
 

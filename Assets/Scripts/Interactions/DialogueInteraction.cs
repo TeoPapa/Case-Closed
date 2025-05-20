@@ -10,7 +10,8 @@ public class DialogueInteraction : Interaction {
     public List<Dial> Dialogues;
     public Destroyable DestroyableObj;
 
-    public List<GameObject> Enables;
+    public Enablable Enables;
+    public List<Destroyable> Disables;
 
     int IndexOfDialogue = 0;
 
@@ -36,17 +37,14 @@ public class DialogueInteraction : Interaction {
         if (DestroyableObj != null)
             DestroyableObj.DestroyMe(true);
 
-        if (Enables.Count > 0) {
-            foreach(GameObject e in Enables)
-                e.SetActive(true);
+        Enables.EnableMe(true);
+
+        if (Disables.Count > 0) {
+            Destroyable sav = Disables[0];
+            for(int i =1; i <Disables.Count; i++)
+                Disables[i].DestroyMe(false);
+            sav.DestroyMe(true);
         }
-    }
-
-    private new void Start() {
-        foreach(GameObject e in Enables)
-            e.gameObject.SetActive(false);
-
-        base.Start();
     }
 }
 

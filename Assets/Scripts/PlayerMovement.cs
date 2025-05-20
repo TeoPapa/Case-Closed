@@ -18,8 +18,6 @@ public class PlayerMovement : MonoBehaviour
     public TMP_Text MoneyValue; //The information of the interaction (e.g. Level
                                 //number, dialogue pop ups etc.
 
-    public GameObject TutorialCanvas;
-
     public Animator PlayerAnimator; //The Player's Animator
 
     float GetX; //Variables that hold the current
@@ -28,17 +26,9 @@ public class PlayerMovement : MonoBehaviour
 
     Interaction currInt; //The current interaction that the player can interact with
 
-    private void Awake() {
-        GameHandler.DestroyItems(); //Destroys all already interacted destroyable items
-    }
-
     void Start() {
-        Debug.Log("Destroyed:" + GameHandler.DestroyedStuff.Count);
-
-        if (GameHandler.LevelsPlayed.Count > 1) {
-            TutorialCanvas.SetActive(false);
-        }
-
+        GameHandler.EnableItems();
+        GameHandler.DestroyItems();
         BubbleCanvas.SetActive(false);
         currInt = null;
 
@@ -84,12 +74,11 @@ public class PlayerMovement : MonoBehaviour
         currInt = collision.gameObject.GetComponent<Interaction>();
 
         txt.text = currInt.getBubble();
-
-
-        currInt = collision.gameObject.GetComponent<Interaction>();
     }
 
     private void OnTriggerExit2D(Collider2D collision) {
+        if (!collision.gameObject.tag.Equals("Interaction")) return;
+
         currInt = null;
         BubbleCanvas.SetActive(false);
     }

@@ -231,8 +231,7 @@ public class CaseHandler : MonoBehaviour {
 
         int gain = GameHandler.CloseCase(CurrentCase.Level, Lives);
         MoneyRec.GetComponent<TMP_Text>().text = gain.ToString();
-        GameHandler.hasPlayedBefore = true;
-        Saver.Save("LevelScene");
-
+        GameHandler.DefaultScene = "LevelScene";
+        GameHandler.Save(true);
     }
 }

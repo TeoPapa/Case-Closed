@@ -15,6 +15,10 @@ public class Settings : MonoBehaviour
     public GameObject TestingPanel;
     public TMP_Text Money;
 
+    private void Awake() {
+        GameHandler.Load();
+    }
+
     protected void Start() {
         SettingsPanel.SetActive(false);
         TestingPanel.SetActive(false);
@@ -77,7 +81,8 @@ public class Settings : MonoBehaviour
         Blockade[] b = FindObjectsByType<Blockade>(FindObjectsSortMode.None);
 
         foreach(Blockade bl in b) {
-            Destroy(bl);
+            foreach (Destroyable d in bl.dest)
+                d.DestroyMe(false);
         }
     }
 
@@ -100,7 +105,7 @@ public class Settings : MonoBehaviour
         GameHandler.MusicVolume = 1f;
         GameHandler.SfxVolume = 1f;
 
-        Saver.Save("MainMenu");
+        Saver.Save();
         SceneManager.LoadScene("MainMenu");
     }
 

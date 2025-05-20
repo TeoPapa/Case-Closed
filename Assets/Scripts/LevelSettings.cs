@@ -26,5 +26,12 @@ public class LevelSettings : Settings {
         TutorialJoy.SetActive(mode);
         TutorialButton.SetActive(!mode);
         ButtonsPanel.SetActive(!mode);
+
+        if(mode)
+            GameHandler.MovementMode = 1;
+        else
+            GameHandler.MovementMode = 2;
+
+        GameHandler.Save(false);
     }
 }

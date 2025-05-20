@@ -31,16 +31,21 @@ public class TeleportCanvas : InteractableCanvas
 
         PlayerMovement player = FindFirstObjectByType<PlayerMovement>();
         player.transform.position = positionToTeleport;
-        RectTransform r = (RectTransform)player.BubbleCanvas.transform;
-        if (GoingToInterior) {
+        player.BubbleCanvas.SetActive(true);
+        RectTransform rectTransform = (RectTransform)player.BubbleCanvas.transform;
+
+        if (GoingToInterior) {//Goes in interior
             player.transform.localScale = new Vector3(PlayerScaleOnInterior, PlayerScaleOnInterior, 1);
             player.GetComponentInChildren<Camera>().orthographicSize = CameraSizeOnInterior;
-            r.position = BubbleOnInterior;
-        } else {
+            rectTransform.position.Set(BubbleOnInterior.x, BubbleOnInterior.y, BubbleOnInterior.z);
+        } else {//Goes to city
             player.transform.localScale = new Vector3(PlayerScaleOnCity, PlayerScaleOnCity, 1);
+
+            rectTransform.position.Set(BubbleOnCity.x, BubbleOnCity.y, BubbleOnCity.z);
             player.GetComponentInChildren<Camera>().orthographicSize = CameraSizeOnCity;
-            r.position = BubbleOnCity;
         }
+        player.BubbleCanvas.SetActive(false);
+
 
         yield return new WaitForSeconds(.1f);
         Fade.SetBool("Fading", false);

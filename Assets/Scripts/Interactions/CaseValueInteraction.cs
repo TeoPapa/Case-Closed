@@ -26,6 +26,5 @@ public class CaseValueInteraction : Interaction
             Debug.Log("Null");
             return;
         }
-        Debug.Log(Case.Level.getNumber());
     }
 }

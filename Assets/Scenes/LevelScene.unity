@@ -417,6 +417,7 @@ GameObject:
   - component: {fileID: 21127047}
   - component: {fileID: 21127049}
   - component: {fileID: 21127048}
+  - component: {fileID: 21127050}
   m_Layer: 5
   m_Name: FirstTimePick
   m_TagString: Untagged
@@ -484,6 +485,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 21127046}
   m_CullTransparentMesh: 1
+--- !u!114 &21127050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 21127046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4b35b5f5a8d75a458b414040d54eda0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DestroyableID: 0
 --- !u!1 &23925648
 GameObject:
   m_ObjectHideFlags: 0
@@ -2881,7 +2895,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 782312255}
+      - m_Target: {fileID: 782312260}
         m_TargetAssemblyTypeName: Settings, Assembly-CSharp
         m_MethodName: OpenSettings
         m_Mode: 1
@@ -4066,7 +4080,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 782312255}
+      - m_Target: {fileID: 782312260}
         m_TargetAssemblyTypeName: Settings, Assembly-CSharp
         m_MethodName: ResetThem
         m_Mode: 1
@@ -4854,7 +4868,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 782312255}
+      - m_Target: {fileID: 782312260}
         m_TargetAssemblyTypeName: Settings, Assembly-CSharp
         m_MethodName: AddM
         m_Mode: 1
@@ -32857,6 +32871,7 @@ GameObject:
   - component: {fileID: 707280310}
   - component: {fileID: 707280312}
   - component: {fileID: 707280311}
+  - component: {fileID: 707280314}
   - component: {fileID: 707280313}
   m_Layer: 0
   m_Name: DrevinFirst
@@ -32892,7 +32907,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4b35b5f5a8d75a458b414040d54eda0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DestroyableID: 1
+  DestroyableID: 2
 --- !u!114 &707280312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32927,10 +32942,9 @@ MonoBehaviour:
     - Name: Drevin
       Answer: Okay boss!
   DestroyableObj: {fileID: 707280311}
-  Enables:
-  - {fileID: 1312217325}
-  - {fileID: 1424908396}
-  - {fileID: 789144188}
+  Enables: {fileID: 707280314}
+  Disables:
+  - {fileID: 21127050}
 --- !u!61 &707280313
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32977,6 +32991,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 4.058569, y: 3.8131542}
   m_EdgeRadius: 0
+--- !u!114 &707280314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 707280309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc7ccbc42e3292045bd9dec665e5cc83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnableID: 0
+  Enables:
+  - {fileID: 1312217325}
+  - {fileID: 1424908396}
 --- !u!1 &711600049
 GameObject:
   m_ObjectHideFlags: 0
@@ -33468,7 +33498,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 782312255}
+      - m_Target: {fileID: 782312260}
         m_TargetAssemblyTypeName: Settings, Assembly-CSharp
         m_MethodName: DestroyThem
         m_Mode: 1
@@ -34453,7 +34483,6 @@ GameObject:
   - component: {fileID: 782312258}
   - component: {fileID: 782312257}
   - component: {fileID: 782312256}
-  - component: {fileID: 782312255}
   - component: {fileID: 782312260}
   m_Layer: 5
   m_Name: SettingsCanvas
@@ -34462,24 +34491,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &782312255
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 782312254}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 202049f623b00134aa0dada9b0c09a11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MusicVolume: {fileID: 731204293}
-  SfxVolume: {fileID: 81037600}
-  CodeField: {fileID: 1924545753}
-  SettingsPanel: {fileID: 2069023807}
-  TestingPanel: {fileID: 286760934}
-  Money: {fileID: 2091843038}
 --- !u!114 &782312256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34654,7 +34665,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.091156006, y: -0.050178766}
+  m_Offset: {x: -0.42785943, y: -0.050178766}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -34664,7 +34675,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 5.0276794, y: 4.4453893}
+  m_Size: {x: 4.354273, y: 4.4453893}
   m_EdgeRadius: 0
 --- !u!114 &789144192
 MonoBehaviour:
@@ -34689,7 +34700,8 @@ MonoBehaviour:
     - Name: Drevin
       Answer: How are your cases going?
   DestroyableObj: {fileID: 0}
-  Enables: []
+  Enables: {fileID: 0}
+  Disables: []
 --- !u!1 &790341204
 GameObject:
   m_ObjectHideFlags: 0
@@ -35399,7 +35411,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 782312255}
+      - m_Target: {fileID: 782312260}
         m_TargetAssemblyTypeName: Settings, Assembly-CSharp
         m_MethodName: OpenTesting
         m_Mode: 1
@@ -35596,7 +35608,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 782312255}
+      - m_Target: {fileID: 782312260}
         m_TargetAssemblyTypeName: Settings, Assembly-CSharp
         m_MethodName: OpenSettings
         m_Mode: 1
@@ -35872,7 +35884,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 782312255}
+      - m_Target: {fileID: 782312260}
         m_TargetAssemblyTypeName: Settings, Assembly-CSharp
         m_MethodName: ChangeSfxVolume
         m_Mode: 2
@@ -35917,6 +35929,7 @@ RectTransform:
   m_Children:
   - {fileID: 790341205}
   - {fileID: 1240996999}
+  - {fileID: 1919672223}
   m_Father: {fileID: 21127047}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.058000002, y: 0.07162789}
@@ -36141,7 +36154,8 @@ MonoBehaviour:
     - Name: '**'
       Answer: Sure!
   DestroyableObj: {fileID: 0}
-  Enables: []
+  Enables: {fileID: 0}
+  Disables: []
 --- !u!212 &880332710
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -45723,7 +45737,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.61700004}
   m_AnchorMax: {x: 1, y: 0.7568524}
-  m_AnchoredPosition: {x: -0.000061035156, y: 3.9161377}
+  m_AnchoredPosition: {x: 0, y: 3.9161377}
   m_SizeDelta: {x: 0, y: 3.078598}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &920804609
@@ -61035,7 +61049,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.058000002, y: 0.81642807}
   m_AnchorMax: {x: 0.93500006, y: 0.964657}
-  m_AnchoredPosition: {x: 3.9989624, y: -10.5}
+  m_AnchoredPosition: {x: 3.9989014, y: -10.5}
   m_SizeDelta: {x: -9.609985, y: 2.1903076}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &995561457
@@ -63476,7 +63490,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 782312255}
+      - m_Target: {fileID: 782312260}
         m_TargetAssemblyTypeName: Settings, Assembly-CSharp
         m_MethodName: ChangeMusicVolume
         m_Mode: 2
@@ -64257,7 +64271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4b35b5f5a8d75a458b414040d54eda0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DestroyableID: 0
+  DestroyableID: 1
 --- !u!114 &1325350705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64283,6 +64297,7 @@ MonoBehaviour:
     - Name: Drevin
       Answer: Come here!
   DestroyableObj: {fileID: 1325350704}
+  OthersToDestroy: []
 --- !u!61 &1325350706
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -81227,8 +81242,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f18eb37dfccdcc349b5ccbabd8b17c7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   BlockadeCost: 0
   Description: A block blocks your path
+  ID: 100
   dest: []
 --- !u!61 &1439362634
 BoxCollider2D:
@@ -81380,7 +81397,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4b35b5f5a8d75a458b414040d54eda0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DestroyableID: 0
+  DestroyableID: 100
 --- !u!1 &1442430867
 GameObject:
   m_ObjectHideFlags: 0
@@ -81725,7 +81742,6 @@ MonoBehaviour:
   CanMove: 1
   BubbleCanvas: {fileID: 1926042245}
   MoneyValue: {fileID: 849266381}
-  TutorialCanvas: {fileID: 21127046}
   PlayerAnimator: {fileID: 1454576788}
 --- !u!50 &1454576783
 Rigidbody2D:
@@ -94633,7 +94649,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 80
+  m_SortingOrder: 8
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1523870778
 GameObject:
@@ -95249,7 +95265,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 80
+  m_SortingOrder: 8
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1546743019
 GameObject:
@@ -99861,6 +99877,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1907874514}
   m_CullTransparentMesh: 1
+--- !u!1 &1919672222
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1919672223}
+  - component: {fileID: 1919672225}
+  - component: {fileID: 1919672224}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1919672223
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1919672222}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 863220819}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.00064087, y: 0.001297}
+  m_SizeDelta: {x: 886.39, y: 712.28}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1919672224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1919672222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1919672225
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1919672222}
+  m_CullTransparentMesh: 1
 --- !u!1 &1924545749
 GameObject:
   m_ObjectHideFlags: 0
@@ -101086,8 +101177,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f18eb37dfccdcc349b5ccbabd8b17c7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: I can't leave the office now!
   BlockadeCost: 30
   Description: You can't leave the office till you're done with some cases
+  ID: 3
   dest: []
 --- !u!61 &2036526156
 BoxCollider2D:
@@ -101602,7 +101695,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 782312255}
+      - m_Target: {fileID: 782312260}
         m_TargetAssemblyTypeName: Settings, Assembly-CSharp
         m_MethodName: SceneCh
         m_Mode: 1

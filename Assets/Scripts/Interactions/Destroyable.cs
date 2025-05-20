@@ -8,6 +8,6 @@ public class Destroyable : MonoBehaviour
         if(!GameHandler.DestroyedStuff.Contains(DestroyableID)) GameHandler.DestroyedStuff.Add(DestroyableID);
 
         Destroy(this.gameObject);
-        if(save) Saver.Save("LevelScene");
+        if(save) GameHandler.Save(false);
     }
 }

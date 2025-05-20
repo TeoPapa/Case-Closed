@@ -15,10 +15,11 @@ public class MainMenu : MonoBehaviour
 
     public CaseValue TutorialCase; //The first case of the game
 
-
+    private void Awake() {
+        GameHandler.Load();
+    }
 
     public void Start() {
-        GameHandler.Load();
 
         bool x = GameHandler.hasPlayedBefore;
 
@@ -29,6 +30,7 @@ public class MainMenu : MonoBehaviour
         NamePan.SetActive(false);
 
         GameHandler.Case = TutorialCase;
+        Debug.Log(GameHandler.LevelsPlayed.Count);
     }
 
     public void Continue(GameObject o) {
