@@ -100,6 +100,9 @@ public class Settings : MonoBehaviour
 
         GameHandler.LevelsPlayed = new List<Level>();
 
+        GameHandler.DestroyedStuff.Clear();
+        GameHandler.EnabledStuff.Clear();
+
         GameHandler.DefaultScene = "MainMenu";
 
         GameHandler.MusicVolume = 1f;
