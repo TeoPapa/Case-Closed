@@ -10,6 +10,7 @@ TagManager:
   - Grass
   - Wood
   - InterfaceCanvas
+  - Sand
   layers:
   - Default
   - TransparentFX

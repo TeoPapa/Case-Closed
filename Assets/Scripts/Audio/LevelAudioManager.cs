@@ -23,6 +23,9 @@ public class LevelAudioManager : AudioManager
     [Header("Wood Steps:")]
     public List<AudioClip> WoodSteps;
 
+    [Header("Sand Steps:")]
+    public List<AudioClip> SandSteps;
+
     GameObject Player;
 
     private void Start() {
@@ -55,6 +58,9 @@ public class LevelAudioManager : AudioManager
 
             case "Wood":
                 Sound(StepsSource, WoodSteps[UnityEngine.Random.Range(0, WoodSteps.Count)]);
+                break;
+            case "Sand":
+                Sound(StepsSource, SandSteps[UnityEngine.Random.Range(0, SandSteps.Count)]);
                 break;
         }
     }

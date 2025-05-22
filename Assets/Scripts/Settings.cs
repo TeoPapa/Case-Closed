@@ -29,6 +29,11 @@ public class Settings : MonoBehaviour
         SfxVolume.text = (GameHandler.SfxVolume * 100).ToString();
         SettingsPanel.SetActive(true);
     }
+
+    public void CloseSettings() {
+        GameHandler.Save(true);
+        SettingsPanel.SetActive(false);
+    }
     public void ChangeSfxVolume(UnityEngine.UI.Slider sl) {
         float vlm = sl.value;
         float value = ((int) vlm) / 100f;
