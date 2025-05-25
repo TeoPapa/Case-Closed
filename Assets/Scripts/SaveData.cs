@@ -23,6 +23,8 @@ public class SaveData
     public int[] DestroyedObjects; //Which objects the player has "destroyed"
                                    //(interacted and remove from the game)
 
+    public int[] EnabledObjects;
+
     public int[,] LevelsPlayed; //Which levels the player played
 
 
@@ -41,8 +43,11 @@ public class SaveData
         PlayerPosition[1] = GameHandler.PlayerPosition.y;// 2) The Y position of the player
         PlayerPosition[2] = GameHandler.PlayerPosition.z;// 3) The Z position of the player
 
-        DestroyedObjects = GameHandler.DestroyedStuff.ToArray(); //Passes all the destroyed ID
+        DestroyedObjects = GameHandler.GetEnables(); //Passes all the destroyed ID
                                                                  //of the objects to an array
+
+        EnabledObjects = GameHandler.GetDisables(); //Passes all the Enabled IDs of the
+                                                             //objects into an array
 
         List<Level> Levels = GameHandler.LevelsPlayed; //Creates a List with all the levels
                                                        //played and then converts it to an

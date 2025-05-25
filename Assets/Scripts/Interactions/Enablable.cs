@@ -5,19 +5,22 @@ using UnityEngine;
 public class Enablable : MonoBehaviour
 {
     public int EnableID;
+
     public List<GameObject> Enables;
 
-    private void Awake() {
-        foreach(GameObject o in Enables)
-            o.SetActive(false);
-    }
-
     public void EnableMe(bool Save) {
-        if (!GameHandler.EnabledStuff.Contains(EnableID)) GameHandler.DestroyedStuff.Add(EnableID);
-
         foreach (GameObject en in Enables)
             en.SetActive(true);
 
+        GameHandler.AddEnablable(EnableID, Save);
+
         if (Save) GameHandler.Save(false);
+    }
+
+    private void OnEnable() {
+        if(GameHandler.isEnabled(EnableID)) return;
+
+        foreach (GameObject en in Enables)
+            en.SetActive(false);
     }
 }

@@ -9,13 +9,13 @@ public class Blockade : Interaction
     public string Name = "";
     public int BlockadeCost;
     public string Description;
-    public int ID = -3;
+    public int MyID;
     public List<Destroyable> dest;
 
-    void Awake() {
-        gameObject.AddComponent<Destroyable>();
+    private void Awake() {
+        this.gameObject.AddComponent<Destroyable>();
         dest.Add(this.GetComponent<Destroyable>());
-        dest[dest.Count - 1].DestroyableID = ID;
+        dest[dest.Count-1].DestroyableID = MyID;
     }
 
     protected override string setBubble() {

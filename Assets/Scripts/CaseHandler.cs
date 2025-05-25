@@ -127,6 +127,13 @@ public class CaseHandler : MonoBehaviour {
 
             Panels[i].gameObject.SetActive(false);
         }
+
+        for (int i = 0; i < Parents.Count; i++) {
+            GameObject Parent = Parents[i];
+            RectTransform transform = Parent.GetComponent<RectTransform>();
+
+            transform.sizeDelta = new Vector2(transform.sizeDelta.x, ( (CurrentCase.getCount(i) / 2)*550) );
+        }
     }
 
     public void Open() {

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelSettings : Settings {
     public GameObject JoystickPanel;
@@ -17,6 +18,10 @@ public class LevelSettings : Settings {
             TutorialButton.SetActive(true);
             ButtonsPanel.SetActive(true);
         }
+
+
+        GameHandler.EnableItems();
+        GameHandler.DestroyItems();
 
         base.Start();
     }

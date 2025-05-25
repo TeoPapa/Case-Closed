@@ -27,8 +27,6 @@ public class PlayerMovement : MonoBehaviour
     Interaction currInt; //The current interaction that the player can interact with
 
     void Start() {
-        GameHandler.EnableItems();
-        GameHandler.DestroyItems();
         BubbleCanvas.SetActive(false);
         currInt = null;
 
@@ -92,5 +90,18 @@ public class PlayerMovement : MonoBehaviour
 
     public void Step() {
         FindFirstObjectByType<LevelAudioManager>().MovingSound();
+    }
+
+    public void ChangeMovementValues(float Scale,float Speed, float CameraSize, Vector3 Bubble) {
+        BubbleCanvas.SetActive(true);
+
+        RectTransform rectTransform = (RectTransform)BubbleCanvas.transform;
+
+        transform.localScale = new Vector3(Scale, Scale, 1);
+        WalkSpeed = Speed;
+        GetComponentInChildren<Camera>().orthographicSize = CameraSize;
+        rectTransform.position.Set(Bubble.x, Bubble.y, Bubble.z);
+
+        BubbleCanvas.SetActive(false);
     }
 }

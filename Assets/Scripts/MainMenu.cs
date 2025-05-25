@@ -30,7 +30,6 @@ public class MainMenu : MonoBehaviour
         NamePan.SetActive(false);
 
         GameHandler.Case = TutorialCase;
-        Debug.Log(GameHandler.LevelsPlayed.Count);
     }
 
     public void Continue(GameObject o) {

@@ -28,9 +28,9 @@ public class CaseItemType{
     }
 
     public string getDescription() {
-        if(Description.Length <= 100) return Description;
+        if(Description.Length <= 140) return Description;
 
-        return Description.Substring(0, 100);
+        return Description.Substring(0, 140);
     }
 
     public bool isInCase() {

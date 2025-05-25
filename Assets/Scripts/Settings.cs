@@ -99,14 +99,11 @@ public class Settings : MonoBehaviour
 
         GameHandler.PlayerPosition = new Vector3(-241f, 34f, 0);
 
-        GameHandler.DestroyedStuff = new List<int>();
-
         GameHandler.Case = null;
 
         GameHandler.LevelsPlayed = new List<Level>();
 
-        GameHandler.DestroyedStuff.Clear();
-        GameHandler.EnabledStuff.Clear();
+        GameHandler.Clear();
 
         GameHandler.DefaultScene = "MainMenu";
 

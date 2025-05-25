@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -23,10 +24,10 @@ public class GameHandler : MonoBehaviour
                                                                       //in the LevelScene (Initialized to
                                                                       //a centered place)
 
-    public static List<int> DestroyedStuff = new List<int>(); //All the destroyed objects (by ID) (Objects
+    private static List<int> DestroyedStuff = new List<int>(); //All the destroyed objects (by ID) (Objects
                                                               //that the player has already interacted and
                                                               //can be destroyed)
-    public static List<int> EnabledStuff = new List<int>();
+    private static List<int> EnabledStuff = new List<int>();
 
     public static CaseValue Case; //The current Case that is going to Load to the CaseScene
 
@@ -68,26 +69,64 @@ public class GameHandler : MonoBehaviour
         return moneyWon;
     }
 
+    public static void AddDestroyable(int ID, bool S) {
+        if( !(DestroyedStuff.Contains(ID)) ) DestroyedStuff.Add(ID);
+
+        if(S) Save(false);
+    }
+
+    public static void AddEnablable(int ID, bool S) {
+        if (!(EnabledStuff.Contains(ID))) EnabledStuff.Add(ID);
+
+        if(S) Save(false);
+    }
+
     public static void EnableItems() {
+        Debug.Log("Enabled!");
         List<Enablable> e = new List<Enablable>();
         e.AddRange(FindObjectsByType<Enablable>(FindObjectsSortMode.None));
 
         foreach (Enablable en in e) {
-            if (DestroyedStuff.Contains(en.EnableID))
+            if (EnabledStuff.Contains(en.EnableID))
                 en.EnableMe(false);
         }
     }
 
-    /* T
-     */
-    public static void DestroyItems() {
-        List<Destroyable> b = new List<Destroyable>();
+    public static int[] GetEnables() {
+        return EnabledStuff.ToArray();
+    }
 
-        b.AddRange(FindObjectsByType<Destroyable>(FindObjectsSortMode.None));
-        foreach(Destroyable bl in b) {
-            if (DestroyedStuff.Contains(bl.DestroyableID))
-                bl.DestroyMe(false);
+    public static int[] GetDisables() {
+        return DestroyedStuff.ToArray();
+    }
+
+    public static void DestroyItems() {
+        Debug.Log("Disabled!");
+        List<Destroyable> des = new List<Destroyable>();
+
+        des.AddRange(FindObjectsByType<Destroyable>(FindObjectsSortMode.None));
+        foreach(Destroyable d in des) {
+            if (DestroyedStuff.Contains(d.DestroyableID)) {
+                d.DestroyMe(false);
+
+                Debug.Log("Destroyed: " + d.DestroyableID);
+            }
         }
+
+
+        Debug.Log("Destroyed stuff contains:");
+        foreach (int i in DestroyedStuff)
+            Debug.Log(i);
+    }
+
+
+
+    public static bool isDestroyed(int ID) {
+        return DestroyedStuff.Contains(ID);
+    }
+
+    public static bool isEnabled(int ID) {
+        return EnabledStuff.Contains(ID);
     }
 
     public static void Save(bool FromCase) {
@@ -106,6 +145,10 @@ public class GameHandler : MonoBehaviour
         }
 
         PlayerPosition = PlayerPos;
+
+        DestroyedStuff = DestroyedStuff.Distinct().ToList();
+        EnabledStuff = EnabledStuff.Distinct().ToList();
+
         Saver.Save();
     }
 
@@ -128,6 +171,7 @@ public class GameHandler : MonoBehaviour
         PlayerPosition.z = data.PlayerPosition[2];
 
         DestroyedStuff.AddRange(data.DestroyedObjects);
+        EnabledStuff.AddRange(data.EnabledObjects);
 
         LevelsPlayed.Clear();
 
@@ -138,5 +182,10 @@ public class GameHandler : MonoBehaviour
         }
 
         if (hasPlayedBefore) DefaultScene = "LevelScene";
+    }
+
+    public static void Clear() {
+        EnabledStuff.Clear();
+        DestroyedStuff.Clear();
     }
 }

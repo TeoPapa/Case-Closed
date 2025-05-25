@@ -20,14 +20,12 @@ public class PlayedLevels : MonoBehaviour
     }
 
     public void OpenLevels() {
-        Debug.Log("Played Count: " + GameHandler.LevelsPlayed.Count);
         LevelsPanel.SetActive(true);
         List<Level> Levels = GameHandler.LevelsPlayed;
 
         LevelsParent.GetComponent<RectTransform>().sizeDelta = new Vector2(LevelsParent.GetComponent<RectTransform>().sizeDelta.x, Levels.Count * 320);
 
         Group.cellSize = new Vector2(LevelsParent.GetComponent<RectTransform>().rect.width, Group.cellSize.y);
-        Debug.Log(LevelsParent.GetComponent<RectTransform>().rect.width);
 
         foreach (Level level in Levels) {
             GameObject o = Instantiate(LevelObject, LevelsParent.transform);
