@@ -21,12 +21,12 @@ public class GameHandler : MonoBehaviour
     public static bool hasPlayedBefore = false; //If the player plays for the first time
 
     public static Vector3 PlayerPosition = new Vector3(-241f, 34f, 0); //The position that the player loads
-                                                                      //in the LevelScene (Initialized to
-                                                                      //a centered place)
+                                                                       //in the LevelScene (Initialized to
+                                                                       //a centered place)
 
     private static List<int> DestroyedStuff = new List<int>(); //All the destroyed objects (by ID) (Objects
-                                                              //that the player has already interacted and
-                                                              //can be destroyed)
+                                                               //that the player has already interacted and
+                                                               //can be destroyed)
     private static List<int> EnabledStuff = new List<int>();
 
     public static CaseValue Case; //The current Case that is going to Load to the CaseScene
@@ -44,6 +44,7 @@ public class GameHandler : MonoBehaviour
      */
     public static void LoadScene()
     {
+        PlayerPosition = FindFirstObjectByType<PlayerMovement>().gameObject.transform.position;
         Save(false);
         SceneManager.LoadScene("CaseScene");
     }

@@ -5840,8 +5840,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0.26244518}
-  m_AnchoredPosition: {x: 0, y: -0.38000488}
-  m_SizeDelta: {x: 0, y: -0.7599945}
+  m_AnchoredPosition: {x: 0, y: -4.2088}
+  m_SizeDelta: {x: 0, y: -8.4176}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &547447412
 MonoBehaviour:
@@ -5863,7 +5863,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Inestigation \nMode"
+  m_text: Notes Mode
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9abc20d017cd6e44598065ee12502ea5, type: 2}
   m_sharedMaterial: {fileID: -3986951147606233703, guid: 9abc20d017cd6e44598065ee12502ea5, type: 2}
@@ -5890,12 +5890,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20.6
+  m_fontSize: 30
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 30
   m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -13399,7 +13399,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Ready Mode
+  m_text: Case Mode
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9abc20d017cd6e44598065ee12502ea5, type: 2}
   m_sharedMaterial: {fileID: -3986951147606233703, guid: 9abc20d017cd6e44598065ee12502ea5, type: 2}

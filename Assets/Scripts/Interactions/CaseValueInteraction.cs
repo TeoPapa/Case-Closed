@@ -18,7 +18,7 @@ public class CaseValueInteraction : Interaction
     }
 
     protected override string setBubble() {
-        return "Level " + Case.Level.getNumber();
+        return "Case " + Case.Level.getNumber();
     }
 
     private void OnEnable() {
