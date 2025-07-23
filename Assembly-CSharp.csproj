@@ -74,6 +74,7 @@
     <Compile Include="Assets\Scripts\General\MainMenu.cs" />
     <Compile Include="Assets\Scripts\Interactions\LevelCanvas.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
+    <Compile Include="Assets\Scripts\Settings\PopUp.cs" />
     <Compile Include="Assets\Scripts\General\LevelInformation.cs" />
     <Compile Include="Assets\Scripts\Audio\LevelAudioManager.cs" />
     <Compile Include="Assets\Scripts\Interactions\CaseValueInteraction.cs" />

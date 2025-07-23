@@ -97,7 +97,7 @@ public class Settings : MonoBehaviour
 
         GameHandler.hasPlayedBefore = false;
 
-        GameHandler.PlayerPosition = new Vector3(-241f, 34f, 0);
+        GameHandler.PlayerPosition = new Vector3(-270.5f, -4.4f, 0);
 
         GameHandler.Case = null;
 

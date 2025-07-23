@@ -20,7 +20,7 @@ public class GameHandler : MonoBehaviour
 
     public static bool hasPlayedBefore = false; //If the player plays for the first time
 
-    public static Vector3 PlayerPosition = new Vector3(-241f, 34f, 0); //The position that the player loads
+    public static Vector3 PlayerPosition = new Vector3(-270.5f, -4.4f, 0); //The position that the player loads
                                                                        //in the LevelScene (Initialized to
                                                                        //a centered place)
 
