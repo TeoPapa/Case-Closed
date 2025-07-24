@@ -12,6 +12,7 @@ using UnityEngine.SceneManagement;
  */
 public class GameHandler : MonoBehaviour
 {
+    public static bool IsInside = true; //Knows if the player is in an interior or an exterior place
     public static int MovementMode = 1; //1: Joystick, 2: Arrow Keys
     public static string PlayerName = "Markus";
 
@@ -84,13 +85,13 @@ public class GameHandler : MonoBehaviour
     }
 
     public static void EnableItems() {
-        Debug.Log("Enabled!");
         List<Enablable> e = new List<Enablable>();
         e.AddRange(FindObjectsByType<Enablable>(FindObjectsSortMode.None));
 
         foreach (Enablable en in e) {
-            if (EnabledStuff.Contains(en.EnableID))
+            if (EnabledStuff.Contains(en.EnableID)) {
                 en.EnableMe(false);
+            }
         }
     }
 
@@ -103,22 +104,14 @@ public class GameHandler : MonoBehaviour
     }
 
     public static void DestroyItems() {
-        Debug.Log("Disabled!");
         List<Destroyable> des = new List<Destroyable>();
 
         des.AddRange(FindObjectsByType<Destroyable>(FindObjectsSortMode.None));
         foreach(Destroyable d in des) {
             if (DestroyedStuff.Contains(d.DestroyableID)) {
                 d.DestroyMe(false);
-
-                Debug.Log("Destroyed: " + d.DestroyableID);
             }
         }
-
-
-        Debug.Log("Destroyed stuff contains:");
-        foreach (int i in DestroyedStuff)
-            Debug.Log(i);
     }
 
 
@@ -160,6 +153,9 @@ public class GameHandler : MonoBehaviour
         if (data == null) {
             return;
         }
+
+        IsInside = data.PlayerInInterior;
+        Debug.Log("GameHandler: " + IsInside);
         MovementMode = data.MovementMode;
 
         PlayerName = data.Name;
@@ -173,6 +169,7 @@ public class GameHandler : MonoBehaviour
         PlayerPosition.z = data.PlayerPosition[2];
 
         DestroyedStuff.AddRange(data.DestroyedObjects);
+
         EnabledStuff.AddRange(data.EnabledObjects);
 
         LevelsPlayed.Clear();

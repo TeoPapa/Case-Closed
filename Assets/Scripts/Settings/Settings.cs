@@ -15,7 +15,7 @@ public class Settings : MonoBehaviour
     public GameObject TestingPanel;
     public TMP_Text Money;
 
-    private void Awake() {
+    protected void Awake() {
         GameHandler.Load();
     }
 

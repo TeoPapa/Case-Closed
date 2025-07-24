@@ -10,9 +10,12 @@ using UnityEngine;
 [System.Serializable]
 public class SaveData
 {
+   
     public int MovementMode; //The movement scheme the player prefers
 
     public string Name; //The name of the player
+
+    public bool PlayerInInterior = true; //The boolean that says if the player is inside or outside
 
     public int Money; //The money of the player
 
@@ -32,6 +35,7 @@ public class SaveData
      * and converts it to basic saving types (int, float, bool etc).
      */
     public SaveData() {
+        PlayerInInterior = GameHandler.IsInside;
         MovementMode = GameHandler.MovementMode;
         Name = GameHandler.PlayerName;//Name and Money
         Money = GameHandler.Money;    //need no conversion
@@ -43,10 +47,10 @@ public class SaveData
         PlayerPosition[1] = GameHandler.PlayerPosition.y;// 2) The Y position of the player
         PlayerPosition[2] = GameHandler.PlayerPosition.z;// 3) The Z position of the player
 
-        DestroyedObjects = GameHandler.GetEnables(); //Passes all the destroyed ID
+        DestroyedObjects = GameHandler.GetDisables(); //Passes all the destroyed ID
                                                                  //of the objects to an array
 
-        EnabledObjects = GameHandler.GetDisables(); //Passes all the Enabled IDs of the
+        EnabledObjects = GameHandler.GetEnables(); //Passes all the Enabled IDs of the
                                                              //objects into an array
 
         List<Level> Levels = GameHandler.LevelsPlayed; //Creates a List with all the levels

@@ -8,6 +8,13 @@ public class LevelSettings : Settings {
     public GameObject TutorialJoy;
     public GameObject TutorialButton;
 
+
+    new void Awake() {
+        base.Awake();
+
+        GameHandler.EnableItems();
+        GameHandler.DestroyItems();
+    }
     new void Start() {
         if (GameHandler.MovementMode == 1) {
             JoystickPanel.SetActive(true);
@@ -18,10 +25,6 @@ public class LevelSettings : Settings {
             TutorialButton.SetActive(true);
             ButtonsPanel.SetActive(true);
         }
-
-
-        GameHandler.EnableItems();
-        GameHandler.DestroyItems();
 
         base.Start();
     }

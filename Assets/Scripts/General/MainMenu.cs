@@ -14,10 +14,6 @@ public class MainMenu : MonoBehaviour
 
     public CaseValue TutorialCase; //The first case of the game
 
-    private void Awake() {
-        GameHandler.Load();
-    }
-
     public void Start() {
 
         bool x = GameHandler.hasPlayedBefore;

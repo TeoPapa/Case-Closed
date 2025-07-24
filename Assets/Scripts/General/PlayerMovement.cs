@@ -14,6 +14,9 @@ public class PlayerMovement : MonoBehaviour
     public bool CanMove; //If the player can walk (is in interaction)
     string GroundName; //What is the current ground the player is walking on
 
+    public PlayerInstanceValues Interior;
+    public PlayerInstanceValues Exterior;
+
     public GameObject BubbleCanvas; //The GameObject where the information pops 
     public TMP_Text MoneyValue; //The information of the interaction (e.g. Level
                                 //number, dialogue pop ups etc.
@@ -26,12 +29,21 @@ public class PlayerMovement : MonoBehaviour
 
     Interaction currInt; //The current interaction that the player can interact with
 
+    public void ChangePlayer(bool isInterior) {
+        GameHandler.IsInside = isInterior;
+        if (isInterior) {//Goes in interior
+            ChangeMovementValues(Interior.Scale, Interior.Speed, Interior.Size, Interior.Bubble);
+        } else {//Goes to city
+            ChangeMovementValues(Exterior.Scale, Exterior.Speed, Exterior.Size, Exterior.Bubble);
+        }
+    }
+
     void Start() {
         BubbleCanvas.SetActive(false);
         currInt = null;
 
         this.gameObject.transform.position = GameHandler.PlayerPosition; //Sets the player position accordingly to GameHandler
-
+        ChangePlayer(GameHandler.IsInside);
         ChangeMoney(GameHandler.Money); //Shows in UI how much money the player has
     }
 
@@ -103,5 +115,9 @@ public class PlayerMovement : MonoBehaviour
         rectTransform.position.Set(Bubble.x, Bubble.y, Bubble.z);
 
         BubbleCanvas.SetActive(false);
+    }
+
+    public void SetMove(bool cm) {
+        CanMove = cm;
     }
 }

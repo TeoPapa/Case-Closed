@@ -4,10 +4,6 @@ using UnityEngine;
 public class TeleportCanvas : InteractableCanvas
 {
     Vector2 positionToTeleport;
-
-    public PlayerInstanceValues City;
-    public PlayerInstanceValues Interior;
-
     bool GoingToInterior;
 
     Animator Fade;
@@ -26,12 +22,7 @@ public class TeleportCanvas : InteractableCanvas
 
         PlayerMovement player = FindFirstObjectByType<PlayerMovement>();
         player.transform.position = positionToTeleport;
-
-        if (GoingToInterior) {//Goes in interior
-            player.ChangeMovementValues(Interior.Scale, Interior.Speed, Interior.Size, Interior.Bubble);
-        } else {//Goes to city
-            player.ChangeMovementValues(City.Scale, City.Speed, City.Size, City.Bubble);
-        }
+        player.ChangePlayer(GoingToInterior);
 
 
         yield return new WaitForSeconds(.1f);
