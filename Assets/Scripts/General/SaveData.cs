@@ -10,7 +10,8 @@ using UnityEngine;
 [System.Serializable]
 public class SaveData
 {
-   
+    public float VersionNumber; //The Current Version Of The Game
+
     public int MovementMode; //The movement scheme the player prefers
 
     public string Name; //The name of the player
@@ -35,6 +36,8 @@ public class SaveData
      * and converts it to basic saving types (int, float, bool etc).
      */
     public SaveData() {
+        VersionNumber = GameHandler.GameVersion;
+
         PlayerInInterior = GameHandler.IsInside;
         MovementMode = GameHandler.MovementMode;
         Name = GameHandler.PlayerName;//Name and Money

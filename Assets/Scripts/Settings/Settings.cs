@@ -92,6 +92,7 @@ public class Settings : MonoBehaviour
     }
 
     public void ResetThem() {
+        GameHandler.IsInside = true;
         GameHandler.Money = 0;
         GameHandler.moneyValue = 5;
 

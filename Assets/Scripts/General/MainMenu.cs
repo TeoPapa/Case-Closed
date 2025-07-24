@@ -12,7 +12,7 @@ public class MainMenu : MonoBehaviour
 
     public TMP_InputField Name; //The name input field
 
-    public CaseValue TutorialCase; //The first case of the game
+    public TMP_Text VersionNumber; //The current version of the game
 
     public void Start() {
 
@@ -23,7 +23,7 @@ public class MainMenu : MonoBehaviour
         SettingsBtn.SetActive(x);
         NamePan.SetActive(false);
 
-        GameHandler.Case = TutorialCase;
+        VersionNumber.text = GameHandler.GameVersion.ToString();
     }
 
     public void NameSet() {

@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     public PlayerInstanceValues Exterior;
 
     public GameObject BubbleCanvas; //The GameObject where the information pops 
+    public RectTransform BubbleTransform;
     public TMP_Text MoneyValue; //The information of the interaction (e.g. Level
                                 //number, dialogue pop ups etc.
 
@@ -107,12 +108,14 @@ public class PlayerMovement : MonoBehaviour
     public void ChangeMovementValues(float Scale,float Speed, float CameraSize, Vector3 Bubble) {
         BubbleCanvas.SetActive(true);
 
-        RectTransform rectTransform = (RectTransform)BubbleCanvas.transform;
+        BubbleTransform.anchoredPosition = new Vector3(Bubble.x, Bubble.y, Bubble.z);
+
+        Debug.Log("Bubble: " +  Bubble);
+        Debug.Log(BubbleCanvas.GetComponent<RectTransform>().position);
 
         transform.localScale = new Vector3(Scale, Scale, 1);
         WalkSpeed = Speed;
         GetComponentInChildren<Camera>().orthographicSize = CameraSize;
-        rectTransform.position.Set(Bubble.x, Bubble.y, Bubble.z);
 
         BubbleCanvas.SetActive(false);
     }

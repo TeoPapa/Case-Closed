@@ -12,6 +12,8 @@ using UnityEngine.SceneManagement;
  */
 public class GameHandler : MonoBehaviour
 {
+    public static float GameVersion = 0.06f;
+
     public static bool IsInside = true; //Knows if the player is in an interior or an exterior place
     public static int MovementMode = 1; //1: Joystick, 2: Arrow Keys
     public static string PlayerName = "Markus";
@@ -150,7 +152,7 @@ public class GameHandler : MonoBehaviour
     public static void Load() {
         SaveData data = Saver.Load();
 
-        if (data == null) {
+        if (data == null || data.VersionNumber != GameVersion) {
             return;
         }
 
