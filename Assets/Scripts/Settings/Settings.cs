@@ -115,8 +115,8 @@ public class Settings : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
-    public void SceneCh() {
-        SceneManager.LoadScene("MainMenu");
+    public void SceneCh(string s) {
+        SceneManager.LoadScene(s);
     }
 
     

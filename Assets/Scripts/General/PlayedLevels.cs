@@ -27,9 +27,15 @@ public class PlayedLevels : MonoBehaviour
 
         Group.cellSize = new Vector2(LevelsParent.GetComponent<RectTransform>().rect.width, Group.cellSize.y);
 
+        List<CaseValue> Cases = new List<CaseValue> (FindObjectsByType<CaseValue>(FindObjectsSortMode.None));
+        
+
         foreach (Level level in Levels) {
             GameObject o = Instantiate(LevelObject, LevelsParent.transform);
-            o.GetComponent<LevelInformation>().SetLevel(level.getNumber(), (level.getMoney() / 5));
+
+            CaseValue ca = Cases.Find((CaseValue c) => { return c.Level.getNumber() == level.getNumber(); });
+
+            o.GetComponent<LevelInformation>().SetLevel(level.getNumber(), (level.getMoney() / 5), ca);
         }
 
         FindFirstObjectByType<PlayerMovement>().CanMove = false;
@@ -40,6 +46,8 @@ public class PlayedLevels : MonoBehaviour
             Destroy(child.gameObject);
         LevelsPanel.SetActive(false);
 
-        FindFirstObjectByType<PlayerMovement>().CanMove = true  ;
+        GameHandler.Case = null;
+
+        FindFirstObjectByType<PlayerMovement>().CanMove = true;
     }
 }

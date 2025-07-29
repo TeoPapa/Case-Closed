@@ -31,15 +31,22 @@ public class LevelCanvas : InteractableCanvas {
 
     protected override void OpenCanvas() {
         CaseValueInteraction c = (CaseValueInteraction)Inter;
-        CaseValue Case = c.Case;
+        try {
+            CaseValue Case = c.Case;
+            InitializeCanvas(Case);
+        } catch (NullReferenceException e) {
+            Debug.LogException(e);
+        }
+    }
 
+    private void InitializeCanvas(CaseValue Case) {
         Level thisLevel = GameHandler.LevelsPlayed.Find((Level l) => { return l.getNumber() == Case.Level.getNumber(); });
         if (thisLevel == null) thisLevel = Case.Level;
         LevelNumber.text = thisLevel.getNumber().ToString();
 
         MoneyText.text = thisLevel.getMoney().ToString();
 
-        DescriptionText.text = thisLevel.getDescription();
+        DescriptionText.text = Case.Description;
 
 
         Level hbp = hasBeenPlayed(Case.Level);
@@ -53,5 +60,10 @@ public class LevelCanvas : InteractableCanvas {
             hbp = Case.Level;
 
         GameHandler.Case = Case;
+    }
+
+    public void OpenCanvas(CaseValue cas) {
+        Open();
+        InitializeCanvas(cas);
     }
 }

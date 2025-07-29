@@ -10,12 +10,21 @@ public class LevelInformation : MonoBehaviour
 
     public GameObject Lives;
 
-    public void SetLevel(int Number, int NumberOfLives) {
+    [HideInInspector]
+    public CaseValue Val;
+
+    public void SetLevel(int Number, int NumberOfLives, CaseValue Case) {
         LevelNumber.text = Number.ToString();
+        Val = Case;
 
         for (int i = 0; i < NumberOfLives && i < 3; i++) {
             GameObject o = Instantiate(Lives, LivesParent.transform, LivesParent);
         }
+    }
+
+    public void OpenCase() {
+        GameHandler.Case = Val;
+        FindAnyObjectByType<LevelCanvas>().OpenCanvas(Val);
     }
 }
 

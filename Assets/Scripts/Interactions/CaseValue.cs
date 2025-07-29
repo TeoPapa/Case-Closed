@@ -15,6 +15,10 @@ public class CaseValue : MonoBehaviour {
     int Items;
     int People;
 
+    public CaseValue(Level level) {
+        Level = level;
+    }
+
     private void Start() {
         Level = new Level(LevelNum, Description);
         Locations = 0;
@@ -90,5 +94,9 @@ public class CaseValue : MonoBehaviour {
                     break;
             }
         }
+    }
+
+    public bool Equals(CaseValue other) {
+        return this.Level.getNumber() == other.Level.getNumber();
     }
 }
