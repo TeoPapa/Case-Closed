@@ -34,8 +34,10 @@ public class PlayerMovement : MonoBehaviour
         GameHandler.IsInside = isInterior;
         if (isInterior) {//Goes in interior
             ChangeMovementValues(Interior.Scale, Interior.Speed, Interior.Size, Interior.Bubble);
+            FindFirstObjectByType<ObjectiveTrack>().Activate(false);
         } else {//Goes to city
             ChangeMovementValues(Exterior.Scale, Exterior.Speed, Exterior.Size, Exterior.Bubble);
+            FindFirstObjectByType<ObjectiveTrack>().Activate(true);
         }
     }
 
@@ -49,7 +51,11 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void FixedUpdate() {
-        rb.linearVelocity = new Vector2(GetX * WalkSpeed, GetY * WalkSpeed);
+        if (CanMove) {
+            rb.linearVelocity = new Vector2(GetX * WalkSpeed, GetY * WalkSpeed);
+        } else {
+            rb.linearVelocity = new Vector2(0, 0);
+        }
     }
 
     /* Sets the UI text money to the x ammount (Shows: x$ )
@@ -60,6 +66,7 @@ public class PlayerMovement : MonoBehaviour
 
 
     public void Move(InputAction.CallbackContext context) {
+
         Vector2 val = new Vector2(0,0);
         GetX = GetY = 0;
 
@@ -109,9 +116,6 @@ public class PlayerMovement : MonoBehaviour
         BubbleCanvas.SetActive(true);
 
         BubbleTransform.anchoredPosition = new Vector3(Bubble.x, Bubble.y, Bubble.z);
-
-        Debug.Log("Bubble: " +  Bubble);
-        Debug.Log(BubbleCanvas.GetComponent<RectTransform>().position);
 
         transform.localScale = new Vector3(Scale, Scale, 1);
         WalkSpeed = Speed;

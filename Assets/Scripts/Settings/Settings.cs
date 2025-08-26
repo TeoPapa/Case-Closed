@@ -12,16 +12,13 @@ public class Settings : MonoBehaviour
 
     public GameObject SettingsPanel;
 
-    public GameObject TestingPanel;
-    public TMP_Text Money;
-
     protected void Awake() {
         GameHandler.Load();
+        Input.multiTouchEnabled = false;
     }
 
     protected void Start() {
         SettingsPanel.SetActive(false);
-        TestingPanel.SetActive(false);
     }
 
     public void OpenSettings() {
@@ -61,59 +58,7 @@ public class Settings : MonoBehaviour
         MusicChange(sl.value);
     }
 
-    public void OpenTesting() {
-        string CodeW = CodeField.text;
-
-        if (CodeW.Equals(GameHandler.Code))
-            Open();
-    }
-
-    void Open() {
-        TestingPanel.SetActive(true);
-        Money.text = GameHandler.Money.ToString();
-    }
-
-    public void AddM() {
-        int mon = GameHandler.Money;
-        mon += GameHandler.moneyValue;
-
-        if(mon > 1000) mon = 1000;
-        Money.text = mon.ToString();
-        GameHandler.Money = mon;
-    }
-
-    public void DestroyThem() {
-        Blockade[] b = FindObjectsByType<Blockade>(FindObjectsSortMode.None);
-
-        foreach(Blockade bl in b) {
-            foreach (Destroyable d in bl.dest)
-                d.DestroyMe(false);
-        }
-    }
-
-    public void ResetThem() {
-        GameHandler.IsInside = true;
-        GameHandler.Money = 0;
-        GameHandler.moneyValue = 5;
-
-        GameHandler.hasPlayedBefore = false;
-
-        GameHandler.PlayerPosition = new Vector3(-270.5f, -4.4f, 0);
-
-        GameHandler.Case = null;
-
-        GameHandler.LevelsPlayed = new List<Level>();
-
-        GameHandler.Clear();
-
-        GameHandler.DefaultScene = "MainMenu";
-
-        GameHandler.MusicVolume = 1f;
-        GameHandler.SfxVolume = 1f;
-
-        Saver.Save();
-        SceneManager.LoadScene("MainMenu");
-    }
+   
 
     public void SceneCh(string s) {
         SceneManager.LoadScene(s);

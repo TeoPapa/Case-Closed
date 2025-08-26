@@ -22,7 +22,5 @@ public class Enablable : MonoBehaviour
 
         foreach (GameObject en in Enables)
             en.SetActive(false);
-
-        Debug.Log("Enablable " +  EnableID + " hidden!");
     }
 }

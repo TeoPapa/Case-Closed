@@ -13,7 +13,7 @@ public class DialogueInteraction : Interaction {
     public Enablable Enables;
     public List<Destroyable> Disables;
 
-    int IndexOfDialogue = 0;
+    protected int IndexOfDialogue = 0;
 
     protected override void PlayerInteraction() {
         if (IndexOfDialogue < 0 || IndexOfDialogue >= Dialogues.Count)

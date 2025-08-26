@@ -8,6 +8,8 @@ public class BlockCanvas : InteractableCanvas
     public TMP_Text DescriptionText;
     public TMP_Text CostText;
 
+    public TMP_Text MoneyText;
+
     public GameObject YouSurePanel;
     public GameObject YouCantPanel;
 
@@ -44,6 +46,8 @@ public class BlockCanvas : InteractableCanvas
         GameHandler.Money -= des.BlockadeCost;
         foreach(Destroyable d in des.dest)
             d.DestroyMe(true);
+
+        MoneyText.text = GameHandler.Money.ToString();
 
         GameHandler.Save(false);
         Close();

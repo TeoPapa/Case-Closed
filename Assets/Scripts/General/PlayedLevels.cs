@@ -38,7 +38,7 @@ public class PlayedLevels : MonoBehaviour
             o.GetComponent<LevelInformation>().SetLevel(level.getNumber(), (level.getMoney() / 5), ca);
         }
 
-        FindFirstObjectByType<PlayerMovement>().CanMove = false;
+        FindFirstObjectByType<PlayerMovement>().SetMove(false);
     }
 
     public void CloseLevels() {
@@ -48,6 +48,6 @@ public class PlayedLevels : MonoBehaviour
 
         GameHandler.Case = null;
 
-        FindFirstObjectByType<PlayerMovement>().CanMove = true;
+        FindFirstObjectByType<PlayerMovement>().SetMove(true);
     }
 }

@@ -10,6 +10,7 @@ using UnityEngine;
 [System.Serializable]
 public class SaveData
 {
+
     public float VersionNumber; //The Current Version Of The Game
 
     public int MovementMode; //The movement scheme the player prefers
@@ -20,7 +21,11 @@ public class SaveData
 
     public int Money; //The money of the player
 
+    public float[] CurrentTrack;
+
     public bool hasPlayedBefore; //If it's the first time the player plays the game
+
+
 
     public float[] PlayerPosition; //Where is the last position the player stood
 
@@ -30,6 +35,8 @@ public class SaveData
     public int[] EnabledObjects;
 
     public int[,] LevelsPlayed; //Which levels the player played
+    
+    public int Hat;
 
 
     /* On creation, the constructor of SaveData takes the data from the GameHandler
@@ -38,10 +45,22 @@ public class SaveData
     public SaveData() {
         VersionNumber = GameHandler.GameVersion;
 
+        Hat = GameHandler.Hat;
+
         PlayerInInterior = GameHandler.IsInside;
         MovementMode = GameHandler.MovementMode;
         Name = GameHandler.PlayerName;//Name and Money
         Money = GameHandler.Money;    //need no conversion
+
+        Vector3 pos = new Vector3(0,0,0);
+
+        if(GameHandler.CurrentTrack != null)
+          pos = GameHandler.CurrentTrack.position;
+
+        CurrentTrack = new float[3];
+        CurrentTrack[0] = pos.x;
+        CurrentTrack[1] = pos.y;
+        CurrentTrack[2] = pos.z;
 
         hasPlayedBefore = GameHandler.hasPlayedBefore; //Same goes for hasPlayedBefore
 

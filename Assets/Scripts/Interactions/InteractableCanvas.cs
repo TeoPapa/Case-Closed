@@ -13,12 +13,12 @@ public abstract class InteractableCanvas : MonoBehaviour {
 
     public void Open() {
         Panel.SetActive(true);
-        FindFirstObjectByType<PlayerMovement>().CanMove = false;
+        FindFirstObjectByType<PlayerMovement>().SetMove(false);
         OpenCanvas();
     }
 
     public void Close() {
-        FindFirstObjectByType<PlayerMovement>().CanMove = true;
+        FindFirstObjectByType<PlayerMovement>().SetMove(true);
         CloseCanvas();
         try {
             Inter.InteractionEnded();

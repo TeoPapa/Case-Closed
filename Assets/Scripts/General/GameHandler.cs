@@ -12,7 +12,12 @@ using UnityEngine.SceneManagement;
  */
 public class GameHandler : MonoBehaviour
 {
-    public static float GameVersion = 0.06f;
+    public static float GameVersion = 0.07f;
+
+
+    public static Transform CurrentTrack = null;
+
+    public static int Hat = 0; //The index of the hat that the player has selected (0 is no hat)
 
     public static bool IsInside = true; //Knows if the player is in an interior or an exterior place
     public static int MovementMode = 1; //1: Joystick, 2: Arrow Keys
@@ -40,8 +45,6 @@ public class GameHandler : MonoBehaviour
 
     public static float MusicVolume = 1f;
     public static float SfxVolume = 1f;
-
-    public static string Code = "Teo'sTestingEnv1ronment";
 
     /* The method that initializes and starts the CaseScene
      */
@@ -157,7 +160,6 @@ public class GameHandler : MonoBehaviour
         }
 
         IsInside = data.PlayerInInterior;
-        Debug.Log("GameHandler: " + IsInside);
         MovementMode = data.MovementMode;
 
         PlayerName = data.Name;
@@ -169,6 +171,20 @@ public class GameHandler : MonoBehaviour
         PlayerPosition.x = data.PlayerPosition[0];
         PlayerPosition.y = data.PlayerPosition[1];
         PlayerPosition.z = data.PlayerPosition[2];
+
+        Hat = data.Hat;
+
+
+        Vector3 pos = new Vector3(data.CurrentTrack[0], data.CurrentTrack[1], data.CurrentTrack[2]);
+        if(pos != Vector3.zero) {
+            GameObject temp = new GameObject("Temporary");
+            CurrentTrack = temp.transform;
+            CurrentTrack.position = pos;
+
+            Destroy(temp);
+        } else {
+            CurrentTrack = null;
+        }
 
         DestroyedStuff.AddRange(data.DestroyedObjects);
 
@@ -183,6 +199,10 @@ public class GameHandler : MonoBehaviour
         }
 
         if (hasPlayedBefore) DefaultScene = "LevelScene";
+    }
+
+    public static bool hasPlayedLevel(Level l) {
+        return LevelsPlayed.Contains(l);
     }
 
     public static void Clear() {

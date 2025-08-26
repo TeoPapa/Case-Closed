@@ -41,7 +41,10 @@ public class Dialogue{
         if (Answer.Contains("*"))
             Answer = Answer.Replace("*", GameHandler.PlayerName);
 
-        if(Answer.Length > 309) return Answer.Substring(0, 309);
+        if(Answer.Contains("**"))
+            Answer = Answer.Replace("**", "*");
+
+        if (Answer.Length > 309) return Answer.Substring(0, 309);
         return Answer;
     }
 

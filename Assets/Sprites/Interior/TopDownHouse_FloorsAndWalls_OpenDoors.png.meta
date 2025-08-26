@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      TopDownHouse_FloorsAndWalls_OpenDoors_0: -1455739361726002933
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

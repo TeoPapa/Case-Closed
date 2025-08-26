@@ -46,6 +46,8 @@ public class AudioManager : MonoBehaviour
         }
         EffectsSource.playOnAwake = false;
         EffectsSource.volume = GameHandler.SfxVolume;
+
+        MusicSource.Play();
     }
 
     /* This is the listener for the UI buttons of the game. This Listener is added

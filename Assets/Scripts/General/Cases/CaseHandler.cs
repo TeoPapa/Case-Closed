@@ -132,7 +132,7 @@ public class CaseHandler : MonoBehaviour {
             GameObject Parent = Parents[i];
             RectTransform transform = Parent.GetComponent<RectTransform>();
 
-            transform.sizeDelta = new Vector2(transform.sizeDelta.x, ( (CurrentCase.getCount(i) / 2)*550) );
+            transform.sizeDelta = new Vector2(transform.sizeDelta.x, ((int)(Math.Ceiling((float)(CurrentCase.getCount(i)/2f)))*550));
         }
     }
 
