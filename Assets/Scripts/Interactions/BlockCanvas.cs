@@ -47,9 +47,9 @@ public class BlockCanvas : InteractableCanvas
         foreach(Destroyable d in des.dest)
             d.DestroyMe(true);
 
-        MoneyText.text = GameHandler.Money.ToString();
+        MoneyText.text = GameHandler.Money.ToString()+"$";
 
-        GameHandler.Save(false);
+        GameHandler.Save();
         Close();
     }
 }

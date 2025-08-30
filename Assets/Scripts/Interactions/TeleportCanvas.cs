@@ -28,6 +28,7 @@ public class TeleportCanvas : InteractableCanvas
         yield return new WaitForSeconds(.1f);
         Fade.SetBool("Fading", false);
         yield return new WaitForSeconds(1f);
+        GameHandler.Save();
         Close();
     }
 

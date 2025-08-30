@@ -11,7 +11,7 @@ using UnityEngine;
 public class SaveData
 {
 
-    public float VersionNumber; //The Current Version Of The Game
+    public string Version; //The Current Version Of The Game
 
     public int MovementMode; //The movement scheme the player prefers
 
@@ -21,9 +21,7 @@ public class SaveData
 
     public int Money; //The money of the player
 
-    public float[] CurrentTrack;
-
-    public bool hasPlayedBefore; //If it's the first time the player plays the game
+    public float[] CurrentTrack; //What is now being tracked by the player
 
 
 
@@ -43,7 +41,7 @@ public class SaveData
      * and converts it to basic saving types (int, float, bool etc).
      */
     public SaveData() {
-        VersionNumber = GameHandler.GameVersion;
+        Version = GameHandler.GameVersion;
 
         Hat = GameHandler.Hat;
 
@@ -61,8 +59,6 @@ public class SaveData
         CurrentTrack[0] = pos.x;
         CurrentTrack[1] = pos.y;
         CurrentTrack[2] = pos.z;
-
-        hasPlayedBefore = GameHandler.hasPlayedBefore; //Same goes for hasPlayedBefore
 
         PlayerPosition = new float[3]; //This is the Vector3 position of the player that takes:
         PlayerPosition[0] = GameHandler.PlayerPosition.x;// 1) The X position of the platyer

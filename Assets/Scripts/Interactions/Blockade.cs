@@ -9,14 +9,7 @@ public class Blockade : Interaction
     public string Name = "";
     public int BlockadeCost;
     public string Description;
-    public int MyID;
     public List<Destroyable> dest;
-
-    private void Awake() {
-        this.gameObject.AddComponent<Destroyable>();
-        dest.Add(this.GetComponent<Destroyable>());
-        dest[dest.Count-1].DestroyableID = MyID;
-    }
 
     protected override string setBubble() {
         if(Name.Equals("")) return "Something Blocks My Path!";

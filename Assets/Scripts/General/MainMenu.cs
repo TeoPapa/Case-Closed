@@ -16,7 +16,7 @@ public class MainMenu : MonoBehaviour
 
     public void Start() {
 
-        bool x = GameHandler.hasPlayedBefore;
+        bool x = (GameHandler.GetDisables().Length != 0);
 
         FirstTimeBtn.SetActive(!x);
         ContinueBtn.SetActive(x);

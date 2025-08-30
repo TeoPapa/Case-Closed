@@ -12,7 +12,7 @@ using UnityEngine.SceneManagement;
  */
 public class GameHandler : MonoBehaviour
 {
-    public static float GameVersion = 0.07f;
+    public static string GameVersion = Application.version;
 
 
     public static Transform CurrentTrack = null;
@@ -25,8 +25,6 @@ public class GameHandler : MonoBehaviour
 
     public static int Money; //The money of the player
     public static int moneyValue = 5; //The value of each life in the game
-
-    public static bool hasPlayedBefore = false; //If the player plays for the first time
 
     public static Vector3 PlayerPosition = new Vector3(-270.5f, -4.4f, 0); //The position that the player loads
                                                                        //in the LevelScene (Initialized to
@@ -51,7 +49,7 @@ public class GameHandler : MonoBehaviour
     public static void LoadScene()
     {
         PlayerPosition = FindFirstObjectByType<PlayerMovement>().gameObject.transform.position;
-        Save(false);
+        Save();
         SceneManager.LoadScene("CaseScene");
     }
 
@@ -80,13 +78,13 @@ public class GameHandler : MonoBehaviour
     public static void AddDestroyable(int ID, bool S) {
         if( !(DestroyedStuff.Contains(ID)) ) DestroyedStuff.Add(ID);
 
-        if(S) Save(false);
+        if(S) Save();
     }
 
     public static void AddEnablable(int ID, bool S) {
         if (!(EnabledStuff.Contains(ID))) EnabledStuff.Add(ID);
 
-        if(S) Save(false);
+        if(S) Save();
     }
 
     public static void EnableItems() {
@@ -129,19 +127,14 @@ public class GameHandler : MonoBehaviour
         return EnabledStuff.Contains(ID);
     }
 
-    public static void Save(bool FromCase) {
+    public static void Save() {
         Vector3 PlayerPos = new Vector3();
             
         try {
             PlayerPos = FindFirstObjectByType<PlayerMovement>().transform.position;
         }
-        catch (NullReferenceException e){
-            Debug.Log(e.ToString());
-        }
-
-        if(!hasPlayedBefore || FromCase) {
+        catch (NullReferenceException){
             PlayerPos = GameHandler.PlayerPosition;
-            hasPlayedBefore = true;
         }
 
         PlayerPosition = PlayerPos;
@@ -155,7 +148,8 @@ public class GameHandler : MonoBehaviour
     public static void Load() {
         SaveData data = Saver.Load();
 
-        if (data == null || data.VersionNumber != GameVersion) {
+        if (data == null || !data.Version.Equals(Application.version)) {
+            Debug.Log("Hit");
             return;
         }
 
@@ -166,8 +160,6 @@ public class GameHandler : MonoBehaviour
 
         Money = data.Money;
 
-        hasPlayedBefore = data.hasPlayedBefore;
-
         PlayerPosition.x = data.PlayerPosition[0];
         PlayerPosition.y = data.PlayerPosition[1];
         PlayerPosition.z = data.PlayerPosition[2];
@@ -176,7 +168,7 @@ public class GameHandler : MonoBehaviour
 
 
         Vector3 pos = new Vector3(data.CurrentTrack[0], data.CurrentTrack[1], data.CurrentTrack[2]);
-        if(pos != Vector3.zero) {
+        if (pos != Vector3.zero) {
             GameObject temp = new GameObject("Temporary");
             CurrentTrack = temp.transform;
             CurrentTrack.position = pos;
@@ -193,12 +185,18 @@ public class GameHandler : MonoBehaviour
         LevelsPlayed.Clear();
 
         int[,] Lvls = data.LevelsPlayed;
-        
+
         for (int i = 0; i < Lvls.GetLength(0); i++) {
             LevelsPlayed.Add(new Level(Lvls[i, 0], Lvls[i, 1]));
         }
 
-        if (hasPlayedBefore) DefaultScene = "LevelScene";
+        try {
+            FindFirstObjectByType<PlayerMovement>().transform.position = PlayerPosition;
+            FindFirstObjectByType<WardrobeCanvas>().changeHat(Hat);
+        } catch (NullReferenceException e) {
+            Debug.Log(e.ToString());
+        }
+
     }
 
     public static bool hasPlayedLevel(Level l) {

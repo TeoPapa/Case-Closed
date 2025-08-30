@@ -28,7 +28,7 @@ public class Settings : MonoBehaviour
     }
 
     public void CloseSettings() {
-        GameHandler.Save(true);
+        GameHandler.Save();
         SettingsPanel.SetActive(false);
     }
     public void ChangeSfxVolume(UnityEngine.UI.Slider sl) {
@@ -58,12 +58,12 @@ public class Settings : MonoBehaviour
         MusicChange(sl.value);
     }
 
-   
+   public void CloseGame() {
+       Application.Quit();
+    }
 
     public void SceneCh(string s) {
         SceneManager.LoadScene(s);
     }
-
-    
 }
 

@@ -25,7 +25,6 @@ public class LevelSettings : Settings {
             TutorialButton.SetActive(true);
             ButtonsPanel.SetActive(true);
         }
-
         base.Start();
     }
 
@@ -40,6 +39,6 @@ public class LevelSettings : Settings {
         else
             GameHandler.MovementMode = 2;
 
-        GameHandler.Save(false);
+        GameHandler.Save();
     }
 }

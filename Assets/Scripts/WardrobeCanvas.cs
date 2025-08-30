@@ -20,9 +20,7 @@ public class WardrobeCanvas : InteractableCanvas
         }
 
         HatSprite.sprite = Hats[Index];
-    }
-
-    protected override void CloseCanvas() {
-        GameHandler.Save(true);
+        GameHandler.Hat = Index;
+        GameHandler.Save();
     }
 }

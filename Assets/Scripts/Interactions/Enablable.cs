@@ -14,7 +14,7 @@ public class Enablable : MonoBehaviour
 
         GameHandler.AddEnablable(EnableID, Save);
 
-        if (Save) GameHandler.Save(false);
+        if (Save) GameHandler.Save();
     }
 
     private void OnEnable() {

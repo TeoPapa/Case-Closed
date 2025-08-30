@@ -16,7 +16,6 @@ public class NewScene : MonoBehaviour
     /* Change to the DefaultScene
      */
     public void newScene() {
-        if (!GameHandler.hasPlayedBefore) ChangeScene("MainMenu");
         ChangeScene(GameHandler.DefaultScene);
     }
 

@@ -194,7 +194,7 @@ public class CaseHandler : MonoBehaviour {
         }
 
         Lives -= 1;
-        Handheld.Vibrate();
+        //Handheld.Vibrate();
     }
 
     public void GameLost() {
@@ -239,6 +239,6 @@ public class CaseHandler : MonoBehaviour {
         int gain = GameHandler.CloseCase(CurrentCase.Level, Lives);
         MoneyRec.GetComponent<TMP_Text>().text = gain.ToString();
         GameHandler.DefaultScene = "LevelScene";
-        GameHandler.Save(true);
+        GameHandler.Save();
     }
 }
